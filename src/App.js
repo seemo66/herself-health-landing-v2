@@ -4,23 +4,25 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
+import InsuranceSection from './components/InsuranceSection';
 import MembershipSection from './components/MembershipSection';
+import LocationSection from './components/LocationsSection';
 import WaitingListSection from './components/WaitingListSection';
-import FaqSection from './components/FaqSection';
 
 function App() {
   // define the order of sections for easy management
   const sections = [
     HeroSection, // hero section with primary call-to-action
     ServicesSection, // services offered by the company
+    InsuranceSection, // insurance information
     MembershipSection, // membership or subscription information
+    LocationSection, // location information
     WaitingListSection, // waiting list or sign-up form
-    FaqSection, // frequently asked questions
   ];
 
   return (
     // container for the entire app, centers content horizontally
-    <div className="mx-auto mt-[78px]">
+    <div className="mx-auto mt-[102px] lg:mt-[78px]">
       {/* site header, usually contains navigation */}
       <Header />
 

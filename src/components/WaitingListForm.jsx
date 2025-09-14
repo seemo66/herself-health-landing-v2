@@ -2,46 +2,75 @@
 // handles user input, submission, and displays a temporary success message
 import { useState, useEffect, useRef } from 'react';
 
+// UTM tracking utility - supports Facebook ad parameters
+function getUTMData() {
+  if (typeof window === 'undefined') return {};
+
+  // First try to get from sessionStorage (set by member.html script)
+  const storedData = sessionStorage.getItem('utm_tracking');
+  if (storedData) {
+    try {
+      return JSON.parse(storedData);
+    } catch (e) {
+      console.warn('Failed to parse stored UTM data:', e);
+    }
+  }
+
+  // Fallback to URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  return {
+    utm_source: urlParams.get('utm_source') || '',
+    utm_medium: urlParams.get('utm_medium') || '',
+    utm_campaign: urlParams.get('utm_campaign') || '',
+    utm_term: urlParams.get('utm_term') || '',
+    utm_content: urlParams.get('utm_content') || '',
+    fb_ad_id: urlParams.get('fb_ad_id') || '',
+    campaign_id: urlParams.get('campaign_id') || '',
+  };
+}
+
 export default function WaitingListForm() {
   // form state
   const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    email: '',
-    phone: '',
+    FirstName: '',
+    LastName: '',
+    Email: '',
+    Phone: '',
   });
 
   // submission state
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   // ref to hold the timeout ID for clearing
   const timerRef = useRef(null);
 
-  // form field definitions for easier mapping
+  // form field definitions for easier mapping (using Salesforce field names)
   const fields = [
     {
-      id: 'firstname',
+      id: 'FirstName',
       label: 'First Name',
       type: 'text',
       placeholder: 'Enter your first name',
       autoComplete: 'given-name',
     },
     {
-      id: 'lastname',
+      id: 'LastName',
       label: 'Last Name',
       type: 'text',
       placeholder: 'Enter your last name',
       autoComplete: 'family-name',
     },
     {
-      id: 'email',
+      id: 'Email',
       label: 'Email Address',
       type: 'email',
       placeholder: 'your@email.com',
       autoComplete: 'email',
     },
     {
-      id: 'phone',
+      id: 'Phone',
       label: 'Phone Number',
       type: 'tel',
       placeholder: '(504) 994-1665',
@@ -49,26 +78,98 @@ export default function WaitingListForm() {
     },
   ];
 
+  // track form interaction start
+  const [formStarted, setFormStarted] = useState(false);
+
   // update form state on input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    // Track form start on first interaction
+    if (!formStarted) {
+      setFormStarted(true);
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        const utmData = getUTMData();
+        window.dataLayer.push({
+          event: 'form_start',
+          form_name: 'member_waitlist',
+          form_id: 'member-waitlist-form',
+          utm_source: utmData.utm_source,
+          utm_medium: utmData.utm_medium,
+          utm_campaign: utmData.utm_campaign,
+          fb_ad_id: utmData.fb_ad_id,
+          campaign_id: utmData.campaign_id,
+          page_type: 'member_landing',
+        });
+      }
+    }
   };
 
   // handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsLoading(true);
+    setError('');
 
-    setSubmitted(true);
+    try {
+      // Get UTM data for tracking
+      const utmData = getUTMData();
 
-    // clear any existing timer
-    if (timerRef.current) clearTimeout(timerRef.current);
+      // Submit to Salesforce API with proper structure
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: 'member-waitlist-form', // Form identifier
+          fields: JSON.stringify(formData), // Salesforce fields
+          form_title: 'Member Waitlist', // Form title for tracking
+          utm_data: JSON.stringify(utmData), // UTM tracking data
+          page_lead_source: 'member', // Lead source for this page
+          page_campaign_id: '', // No specific campaign for member page
+          form_source: 'member_waitlist', // Specific form source identifier
+        }),
+      });
 
-    // reset form and hide success message after 5 seconds
-    timerRef.current = setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ firstname: '', lastname: '', email: '', phone: '' });
-    }, 5000);
+      if (response.ok) {
+        setSubmitted(true);
+        setError('');
+
+        // Track successful form submission in GTM
+        if (typeof window !== 'undefined' && window.dataLayer) {
+          window.dataLayer.push({
+            event: 'form_submit_success',
+            form_name: 'member_waitlist',
+            form_id: 'member-waitlist-form',
+            utm_source: utmData.utm_source,
+            utm_medium: utmData.utm_medium,
+            utm_campaign: utmData.utm_campaign,
+            fb_ad_id: utmData.fb_ad_id,
+            campaign_id: utmData.campaign_id,
+            page_type: 'member_landing',
+          });
+        }
+
+        // clear any existing timer
+        if (timerRef.current) clearTimeout(timerRef.current);
+
+        // reset form and hide success message after 5 seconds
+        timerRef.current = setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ FirstName: '', LastName: '', Email: '', Phone: '' });
+        }, 5000);
+      } else {
+        const errorData = await response.text();
+        console.error('Form submission failed:', errorData);
+        setError('Failed to submit form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // cleanup timer on component unmount
@@ -80,13 +181,20 @@ export default function WaitingListForm() {
     <div className="relative flex items-center justify-center md:justify-start">
       {/* success message overlay */}
       <div
-        className={`absolute transition-opacity duration-700 ease-in-out font-untitled text-[24px] 
+        className={`absolute transition-opacity duration-700 ease-in-out font-untitled text-[24px]
                     text-darkPink text-lg font-medium mb-3 xl:text-[30px] xl:leading-tight text-center ${
                       submitted ? 'opacity-100' : 'opacity-0'
                     }`}
       >
         Thank you! Your form has been submitted.
       </div>
+
+      {/* error message */}
+      {error && (
+        <div className="absolute top-0 left-0 right-0 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          {error}
+        </div>
+      )}
 
       {/* form container */}
       <form
@@ -123,9 +231,14 @@ export default function WaitingListForm() {
         {/* submit button */}
         <button
           type="submit"
-          className="bg-purple text-white p-[10px] rounded-[10px] w-full mt-2 md:col-span-2"
+          disabled={isLoading}
+          className={`p-[10px] rounded-[10px] w-full mt-2 md:col-span-2 font-untitled font-medium text-[18px] transition-colors ${
+            isLoading
+              ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
+              : 'bg-purple text-white hover:bg-purple/90'
+          }`}
         >
-          Submit
+          {isLoading ? 'Submitting...' : 'Submit'}
         </button>
       </form>
     </div>

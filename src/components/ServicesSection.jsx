@@ -1,48 +1,70 @@
-// services section component
-// displays an image alongside key services offered
+// ServicesSection Component
+// Displays an image alongside service highlights and a list of key healthcare areas.
+
 export default function ServicesSection() {
   return (
-    // main section container with responsive layout
     <section
-      className="bg-white px-[30px] py-[40px] flex flex-col gap-[40px] 
-                        lg:flex-row-reverse lg:gap-[54px] lg:py-[74px] lg:items-center lg:justify-center"
+      className="m-auto flex flex-col items-center gap-[40px] bg-white px-[30px] py-[40px] 
+                 xl:flex-row xl:items-center xl:justify-center xl:gap-[54px] xl:px-[155px] xl:py-[90px]"
     >
-      {/* picture element for responsive hero image */}
-      <picture className="block aspect-[1.34] md:aspect-auto">
-        {/* desktop image source with media query */}
+      {/* Responsive service image */}
+      <picture className="block aspect-[1.34] w-full md:aspect-auto md:w-[50%]">
         <source
           srcSet={`${process.env.PUBLIC_URL}/images/services-desktop.webp`}
           media="(min-width: 768px)"
         />
-        {/* mobile image source */}
         <img
-          className="w-full h-full object-cover rounded-[10px] lg:max-w-[643px]"
           src={`${process.env.PUBLIC_URL}/images/services-mobile.webp`}
-          alt="A nurse assists an older woman as they both focus on a tablet, likely reviewing medical information or resources."
+          alt="A nurse assists an older woman as they both review medical information on a tablet."
+          className="h-full w-full rounded-[10px] object-cover lg:max-w-[643px]"
         />
       </picture>
 
-      {/* text content container */}
+      {/* Text content */}
       <div className="lg:max-w-[605px]">
-        {/* section headline */}
-        <h2 className="text-[40px] text-pink font-reckless leading-[100%] mb-[16px] lg:text-[60px]">
-          Care that Covers What Matters
+        <h2 className="mb-[16px] font-reckless text-[40px] leading-[100%] text-pink lg:text-[60px]">
+          What We Offer
         </h2>
 
-        {/* descriptive paragraph */}
-        <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[16px] lg:text-[20px]">
-          From longer visits to 24/7 support, your membership is designed to deliver care that works
-          for you.
+        <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
+          Our providers specialize in comprehensive healthcare for women 60+, creating personalized
+          treatment plans that address your current conditions, prevent future issues, and support
+          your health goals.
         </p>
 
-        {/* list of key services */}
-        <ul className="list-disc pl-7 font-untitled font-normal text-[18px] text-black leading-6 space-y-2">
-          <li>Same-day or next-day appointments</li>
-          <li>On-site mammograms and DEXA scans (coming late 2025)</li>
-          <li>Mental health services</li>
-          <li>24/7 access to a nurse or doctor</li>
-          <li>Support for menopause, hormones, energy, and more</li>
-          <li>A care team who listens and follows through</li>
+        {/* Service highlights with checkmarks */}
+        <ul className="mb-[25px] space-y-4 pl-0 font-untitled text-[20px] font-bold leading-6 text-[#6A0058]">
+          {[
+            'Real Talk and Respect',
+            'Primary Care with Extras',
+            'Covering the Whole You',
+            'Longer Appointment Times',
+            'Medicare Accepted',
+          ].map((item, idx) => (
+            <li key={idx} className="flex items-center space-x-3">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/checkmark-pink.svg`}
+                alt="" // decorative, so we leave empty alt
+                aria-hidden="true"
+                className="h-5 w-5"
+              />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <hr className="my-6 border-t border-black" />
+
+        {/* List of key healthcare services */}
+        <ul className="list-disc pl-7 font-untitled text-[20px] font-normal leading-6 text-black lg:columns-2 lg:space-y-1">
+          <li>Arthritis</li>
+          <li>Behavioral Health</li>
+          <li>Diabetes</li>
+          <li>Heart Health</li>
+          <li>Osteoporosis</li>
+          <li>Post Menopause</li>
+          <li>Thyroid Health</li>
+          <li>Weight Management</li>
         </ul>
       </div>
     </section>
