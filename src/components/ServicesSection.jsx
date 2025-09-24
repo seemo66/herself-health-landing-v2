@@ -35,11 +35,13 @@ export default function ServicesSection() {
         {/* Service highlights with checkmarks */}
         <ul className="mb-[25px] space-y-4 pl-0 font-untitled text-[20px] font-bold leading-6 text-[#6A0058]">
           {[
-            'Real Talk and Respect',
-            'Primary Care with Extras',
-            'Covering the Whole You',
-            'Longer Appointment Times',
-            'Medicare Accepted',
+            'Longer visits with your provider',
+            'Same-day or next-day appointments',
+            'Specialist referrals and ongoing coordination to ensure seamless care',
+            'Preventive screenings',
+            'Chronic condition management',
+            'Mental health support',
+            'Care team available by phone and online',
           ].map((item, idx) => (
             <li key={idx} className="flex items-center space-x-3">
               <img
@@ -54,6 +56,11 @@ export default function ServicesSection() {
         </ul>
 
         <hr className="my-6 border-t border-black" />
+
+        <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
+          From prevention to management, we are here to help you thrive. Some conditions we
+          specialize in include:
+        </p>
 
         {/* List of key healthcare services */}
         <ul className="list-disc pl-7 font-untitled text-[20px] font-normal leading-6 text-black lg:columns-2 lg:space-y-1">

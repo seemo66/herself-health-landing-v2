@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 function getUTMData() {
   if (typeof window === 'undefined') return {};
 
-  // First try to get from sessionStorage (set by member.html script)
+  // First try to get from sessionStorage (set by members.html script)
   const storedData = sessionStorage.getItem('utm_tracking');
   if (storedData) {
     try {
@@ -73,7 +73,7 @@ export default function WaitingListForm() {
       id: 'Phone',
       label: 'Phone Number',
       type: 'tel',
-      placeholder: '(504) 994-1665',
+      placeholder: '(123) 456-7890',
       autoComplete: 'tel',
     },
   ];
@@ -92,14 +92,14 @@ export default function WaitingListForm() {
         const utmData = getUTMData();
         window.dataLayer.push({
           event: 'form_start',
-          form_name: 'member_waitlist',
-          form_id: 'member-waitlist-form',
+          form_name: 'members_waitlist',
+          form_id: 'members-waitlist-form',
           utm_source: utmData.utm_source,
           utm_medium: utmData.utm_medium,
           utm_campaign: utmData.utm_campaign,
           fb_ad_id: utmData.fb_ad_id,
           campaign_id: utmData.campaign_id,
-          page_type: 'member_landing',
+          page_type: 'members_landing',
         });
       }
     }
@@ -122,13 +122,13 @@ export default function WaitingListForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id: 'member-waitlist-form', // Form identifier
+          id: 'members-waitlist-form', // Form identifier
           fields: JSON.stringify(formData), // Salesforce fields
-          form_title: 'Member Waitlist', // Form title for tracking
+          form_title: 'Members Waitlist', // Form title for tracking
           utm_data: JSON.stringify(utmData), // UTM tracking data
-          page_lead_source: 'member', // Lead source for this page
-          page_campaign_id: '', // No specific campaign for member page
-          form_source: 'member_waitlist', // Specific form source identifier
+          page_lead_source: 'members', // Lead source for this page
+          page_campaign_id: '', // No specific campaign for members page
+          form_source: 'members_waitlist', // Specific form source identifier
         }),
       });
 
@@ -140,14 +140,14 @@ export default function WaitingListForm() {
         if (typeof window !== 'undefined' && window.dataLayer) {
           window.dataLayer.push({
             event: 'form_submit_success',
-            form_name: 'member_waitlist',
-            form_id: 'member-waitlist-form',
+            form_name: 'members_waitlist',
+            form_id: 'members-waitlist-form',
             utm_source: utmData.utm_source,
             utm_medium: utmData.utm_medium,
             utm_campaign: utmData.utm_campaign,
             fb_ad_id: utmData.fb_ad_id,
             campaign_id: utmData.campaign_id,
-            page_type: 'member_landing',
+            page_type: 'members_landing',
           });
         }
 
@@ -232,7 +232,7 @@ export default function WaitingListForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className={`p-[10px] rounded-[10px] w-full mt-2 md:col-span-2 font-untitled font-medium text-[18px] transition-colors ${
+          className={`p-[10px] rounded-[10px] w-full mt-2 mb-2 md:col-span-2 font-untitled font-medium text-[18px] transition-colors ${
             isLoading
               ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
               : 'bg-purple text-white hover:bg-purple/90'
@@ -240,6 +240,10 @@ export default function WaitingListForm() {
         >
           {isLoading ? 'Submitting...' : 'Submit'}
         </button>
+        <p className="md:col-span-2">
+          For fastest service, please call us directly. Otherwise, a team member will reach out as
+          quickly as possible.
+        </p>
       </form>
     </div>
   );

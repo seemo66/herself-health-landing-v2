@@ -19,7 +19,7 @@ export default function WaitingListSection() {
             <img
               src={`${process.env.PUBLIC_URL}/images/waitlist-mobile.webp`}
               alt="A woman wearing glasses stands in front of a closed door, looking directly at the camera"
-              className="block w-full md:min-h-[694px] object-cover"
+              className="block w-full md:min-h-[694px] object-cover md:h-[877px]"
             />
           </picture>
         </div>
@@ -31,13 +31,13 @@ export default function WaitingListSection() {
                      md:px-0 md:py-0 md:max-w-[822px] lg:left-[146px]"
         >
           {/* Testimonial block */}
-          <div className="mb-[35px] lg:mb-[40px] md:text-center">
+          <div className="mb-[35px] lg:mb-[40px] md:text-center md:hidden">
             <img
               src={`${process.env.PUBLIC_URL}/images/quotations-icon.png`}
               alt="Quotation mark icon"
               className="block w-[50px] h-full mb-[15px] md:mx-auto"
             />
-            <blockquote className="font-untitled font-medium italic text-[18px] md:text-[20px] text-pink leading-6 mb-[16px]">
+            <blockquote className="font-untitled font-bold italic text-[18px] md:text-[20px] text-pink leading-6 mb-[16px]">
               I felt very valued and well cared for. It was a very good first appointment with the
               very thoughtful doctor.
             </blockquote>
@@ -46,6 +46,23 @@ export default function WaitingListSection() {
             </p>
           </div>
 
+          <a href="tel:+18882091209" className="block mx-auto w-fit mb-[40px]">
+            <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-5">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
+                alt="telephone icon"
+                aria-hidden="true"
+                className="h-auto w-[30px]"
+              />
+              Call Now: (888) 209-1209
+            </button>
+          </a>
+
+          <h3 className="font-untitled font-semibold text-[18px] text-black leading-6 mb-[30px] lg:text-[20px] md:text-center">
+            Want to connect online instead? Fill out the form below and we’ll be in touch promptly
+            to help you get started.
+          </h3>
+
           {/* Form box */}
           <div className="md:border-[2px] bg-white border-pink rounded-[10px] md:px-[83px] md:py-[61px]">
             {/* Headline */}
@@ -53,13 +70,13 @@ export default function WaitingListSection() {
               className="font-reckless font-medium text-[40px] text-pink mb-[16px] 
                          md:mb-[18px] md:text-[50px] leading-[45px]"
             >
-              Schedule Your Appointment
+              Call Today to Schedule Your Appointment
             </h2>
 
             {/* Description */}
             <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[16px] lg:text-[20px]">
-              Fill out the form below and someone from our team will get back to you within 24
-              hours.
+              Join Herself Health today and experience primary care designed for you, and
+              coordinated with your specialists, so your whole health feels connected.
             </p>
 
             {/* Embedded form */}

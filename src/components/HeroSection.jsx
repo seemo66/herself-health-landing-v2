@@ -30,8 +30,8 @@ export default function HeroSection() {
         <div className="md:w-[65%] lg:w-[55%] xl:w-[50%] 2xl:w-[40%] md:max-w-7xl md:pr-8">
           {/* Headline */}
           <h1 className="mb-3 font-reckless text-pink text-[40px] leading-tight md:text-2xl xl:text-5xl">
-            Finally,
-            <br />
+            Finally, &nbsp;
+            <br className="md:hidden" />
             Healthcare That Understands You.
           </h1>
 
@@ -49,7 +49,7 @@ export default function HeroSection() {
           </p>
 
           {/* Call-to-action Description */}
-          <p className="mb-8 font-untitled text-text text-[18px] md:text-base lg:text-lg">
+          <p className="mb-8 font-untitled text-text text-[18px] md:text-base">
             Experience primary care that's designed around your life — not squeezed into someone
             else's schedule.
           </p>

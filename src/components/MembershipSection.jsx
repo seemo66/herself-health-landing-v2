@@ -6,7 +6,7 @@ export default function MembershipSection() {
     {
       icon: 'brain-icon.png',
       alt: 'Brain icon representing patient wellbeing',
-      value: '8000+',
+      value: '9000+',
       label: 'Happy Patients',
     },
     {
@@ -62,16 +62,16 @@ export default function MembershipSection() {
         </h2>
 
         <p className="mb-[16px] font-untitled text-[18px] font-normal leading-6 text-black md:mb-[18px] md:text-[20px]">
-          You've spent a lifetime caring for others—now it's time to focus on you. At Herself
+          You've spent a lifetime caring for others— now it's time to focus on you. At Herself
           Health, we're dedicated to helping women 60+ live their healthiest, most confident lives.
           Thousands of women have trusted us with their care, and with a 4.9-star Google rating, you
           can feel confident you're in good hands.
         </p>
 
         <p className="mb-[16px] font-untitled text-[18px] font-normal leading-6 text-black md:mb-[18px] md:text-[20px]">
-          This is healthcare that supports what you're growing toward, not just what you're going
-          through. Our providers take the time to listen, create personalized plans, and help you
-          feel strong, capable, and ready for whatever lies ahead.
+          This is healthcare that supports what you re growing toward, not just what you're going
+          through. Our providers take the time to listen, coordinate with your existing specialists,
+          and create personalized care plans, so you’re ready for whatever lies ahead.
         </p>
 
         <p className="mb-[38px] font-untitled text-[18px] font-bold leading-6 text-black md:text-[20px]">

@@ -1,11 +1,9 @@
 // WaitingListSection Component
 // Displays accepted insurance plans, fallback info, and contact details.
 
-import WaitingListForm from './WaitingListForm';
-
 export default function WaitingListSection() {
   return (
-    <section id="waiting-list" className="bg-pink">
+    <section className="bg-pink">
       {/* Insurance Plans Banner */}
       <div className="mx-auto max-w-[1270px] px-[30px] pb-[62px] pt-[34px] md:pt-[62px] md:text-center">
         <h2
@@ -57,7 +55,7 @@ export default function WaitingListSection() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-center">
             <img
               src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
-              alt=""
+              alt="telephone icon"
               aria-hidden="true"
               className="mb-[10px] h-auto w-[45px] md:mb-0 md:mr-[20px] md:w-[80px]"
             />
