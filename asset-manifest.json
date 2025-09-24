@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/herself-health-landing-v2/static/css/main.98d42bd5.css",
+    "main.js": "/herself-health-landing-v2/static/js/main.a6ea9181.js",
+    "static/media/Reckless-Regular.woff2": "/herself-health-landing-v2/static/media/Reckless-Regular.95a2fdb6c192564f7cb2.woff2",
+    "static/media/untitled-sans-bold-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-bold-italic.ecfab3dedece91550003.woff2",
+    "static/media/untitled-sans-medium-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-medium-italic.c7b7d76066f14b7414e3.woff2",
+    "static/media/untitled-sans-black-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-black-italic.770c6dc3f81c299088ba.woff2",
+    "static/media/untitled-sans-regular-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-regular-italic.ce1e6589e36d41966e72.woff2",
+    "static/media/untitled-sans-bold.woff2": "/herself-health-landing-v2/static/media/untitled-sans-bold.11fb8eec19ffdee1ea45.woff2",
+    "static/media/untitled-sans-black.woff2": "/herself-health-landing-v2/static/media/untitled-sans-black.998afdce0230b07056a1.woff2",
+    "static/media/untitled-sans-medium.woff2": "/herself-health-landing-v2/static/media/untitled-sans-medium.26705a3111f4b7348b80.woff2",
+    "static/media/untitled-sans-regular.woff2": "/herself-health-landing-v2/static/media/untitled-sans-regular.be9ef45026438505ea37.woff2",
+    "static/media/untitled-sans-light-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-light-italic.16552aac41ae0b987eb0.woff2",
+    "static/media/untitled-sans-light.woff2": "/herself-health-landing-v2/static/media/untitled-sans-light.824e040bfab1530eb07b.woff2",
+    "index.html": "/herself-health-landing-v2/index.html",
+    "main.98d42bd5.css.map": "/herself-health-landing-v2/static/css/main.98d42bd5.css.map",
+    "main.a6ea9181.js.map": "/herself-health-landing-v2/static/js/main.a6ea9181.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98d42bd5.css",
+    "static/js/main.a6ea9181.js"
+  ]
+}
