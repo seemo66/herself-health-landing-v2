@@ -75,7 +75,7 @@ export default function MembershipSection() {
         </p>
 
         <p className="mb-[38px] font-untitled text-[18px] font-bold leading-6 text-black md:text-[20px]">
-          We see it every day: feeling your best never gets old.
+          Because your best self deserves the best care.
         </p>
 
         <button
