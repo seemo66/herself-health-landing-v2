@@ -58,7 +58,7 @@ export default function MembershipSection() {
           className="mb-[16px] font-reckless text-[40px] leading-[45px] text-pink 
                      md:mb-[20px] md:text-[60px] md:leading-[70px]"
         >
-          What We Offer
+          How We Work
         </h2>
 
         <p className="mb-[16px] font-untitled text-[18px] font-normal leading-6 text-black md:mb-[18px] md:text-[20px]">
