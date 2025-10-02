@@ -35,17 +35,17 @@ export default function MembershipSection() {
       <div className="mb-[47px] grid grid-cols-2 gap-16 px-[30px] md:gap-[100px] lg:mx-auto lg:mb-0 lg:w-[50%] lg:max-w-[550px] lg:place-items-center lg:gap-8 lg:gap-x-0 lg:px-0 lg:text-center">
         {stats.map((stat, idx) => (
           <div key={idx} className="flex w-full flex-col items-center gap-[5px] text-center">
-            <div className="mx-auto flex h-[89px] w-[89px] items-center justify-center rounded-full bg-pink lg:h-[116px] lg:w-[116px]">
+            <div className="mx-auto flex h-[89px] w-[89px] items-center justify-center rounded-full bg-dusty-indego lg:h-[116px] lg:w-[116px]">
               <img
                 src={`${process.env.PUBLIC_URL}/images/${stat.icon}`}
                 alt={stat.alt}
                 className="h-auto w-[46px] lg:w-[60px]"
               />
             </div>
-            <h4 className="font-untitled text-[26px] font-bold text-darkPink lg:text-[41px]">
+            <h4 className="font-untitled text-[26px] font-bold text-dusty-indego lg:text-[41px]">
               {stat.value}
             </h4>
-            <p className="font-untitled text-[16px] font-bold leading-5 text-darkPink lg:max-w-full lg:text-[20px]">
+            <p className="font-untitled text-[16px] font-bold leading-5 text-black lg:max-w-full lg:text-[20px]">
               {stat.label}
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function MembershipSection() {
             document.getElementById('waiting-list')?.scrollIntoView({ behavior: 'smooth' })
           }
         >
-          Book a Visit
+          CLICK TO CALL
         </button>
       </div>
     </section>

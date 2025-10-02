@@ -14,6 +14,7 @@ module.exports = {
         tan: '#fff5ed',
         purple: '#8755F1',
         'purple-dark': '#7c4dcf', // hover state
+        'dusty-indego': '#425281',
         text: '#000000',
       },
       boxShadow: {

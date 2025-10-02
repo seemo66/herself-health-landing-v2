@@ -42,7 +42,7 @@ export default function WaitingListSection() {
               very thoughtful doctor.
             </blockquote>
             <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[16px] md:text-[20px]">
-              – Jayne H.
+              – Herself Health Patient.
             </p>
           </div>
 

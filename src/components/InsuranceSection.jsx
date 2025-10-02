@@ -3,12 +3,12 @@
 
 export default function WaitingListSection() {
   return (
-    <section className="bg-pink">
+    <section className="bg-lightPink">
       {/* Insurance Plans Banner */}
       <div className="mx-auto max-w-[1270px] px-[30px] pb-[62px] pt-[34px] md:pt-[62px] md:text-center">
         <h2
           className="mb-[35px] font-reckless text-[40px] leading-[45px] text-white 
-                     md:mb-[20px] md:text-[50px] md:leading-[55px]"
+                     md:mb-[50px] md:text-[50px] md:leading-[55px]"
         >
           We Accept Medicare and Many Medicare Advantage Plans, Including:
         </h2>
@@ -47,7 +47,7 @@ export default function WaitingListSection() {
       </div>
 
       {/* Coverage Fallback / Contact Section */}
-      <div className="mx-auto max-w-[1728px] bg-darkPink px-[30px] pb-[60px] pt-[34px] md:text-center">
+      <div className="mx-auto max-w-[1728px] bg-dusty-indego px-[30px] pb-[60px] pt-[34px] md:text-center">
         <div className="mx-auto max-w-[1100px]">
           <h2 className="mb-[16px] font-reckless text-[40px] leading-tight text-white md:mb-[20px] md:text-[60px]">
             Don’t See Your Plan?

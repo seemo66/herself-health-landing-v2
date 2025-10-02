@@ -25,11 +25,11 @@ export default function HeroSection() {
       <div
         className="relative z-10 px-[30px] pt-[25px] pb-[75px] 
                    md:absolute md:inset-0 md:flex md:items-center md:justify-start md:p-12 
-                   lg:px-[100px]"
+                   lg:px-[100px] xl:pl-[180px]"
       >
-        <div className="md:w-[65%] lg:w-[55%] xl:w-[50%] 2xl:w-[40%] md:max-w-7xl md:pr-8">
+        <div className="md:w-[65%] md:pr-8 lg:w-[685px]">
           {/* Headline */}
-          <h1 className="mb-3 font-reckless text-pink text-[40px] leading-tight md:text-2xl xl:text-5xl">
+          <h1 className="mb-3 font-reckless text-pink text-[40px] leading-tight md:text-3xl xl:text-[60px] xl:leading-[60px]">
             Finally, &nbsp;
             <br className="md:hidden" />
             Healthcare That Understands You.
@@ -62,7 +62,7 @@ export default function HeroSection() {
               document.getElementById('waiting-list')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Book a Visit
+            CLICK TO CALL
           </button>
         </div>
       </div>
