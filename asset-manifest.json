@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/herself-health-landing-v2/static/css/main.98d42bd5.css",
-    "main.js": "/herself-health-landing-v2/static/js/main.e21fb61e.js",
+    "main.css": "/herself-health-landing-v2/static/css/main.8b30a3b9.css",
+    "main.js": "/herself-health-landing-v2/static/js/main.0fa85a63.js",
     "static/media/Reckless-Regular.woff2": "/herself-health-landing-v2/static/media/Reckless-Regular.95a2fdb6c192564f7cb2.woff2",
     "static/media/untitled-sans-bold-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-bold-italic.ecfab3dedece91550003.woff2",
     "static/media/untitled-sans-medium-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-medium-italic.c7b7d76066f14b7414e3.woff2",
@@ -14,11 +14,11 @@
     "static/media/untitled-sans-light-italic.woff2": "/herself-health-landing-v2/static/media/untitled-sans-light-italic.16552aac41ae0b987eb0.woff2",
     "static/media/untitled-sans-light.woff2": "/herself-health-landing-v2/static/media/untitled-sans-light.824e040bfab1530eb07b.woff2",
     "index.html": "/herself-health-landing-v2/index.html",
-    "main.98d42bd5.css.map": "/herself-health-landing-v2/static/css/main.98d42bd5.css.map",
-    "main.e21fb61e.js.map": "/herself-health-landing-v2/static/js/main.e21fb61e.js.map"
+    "main.8b30a3b9.css.map": "/herself-health-landing-v2/static/css/main.8b30a3b9.css.map",
+    "main.0fa85a63.js.map": "/herself-health-landing-v2/static/js/main.0fa85a63.js.map"
   },
   "entrypoints": [
-    "static/css/main.98d42bd5.css",
-    "static/js/main.e21fb61e.js"
+    "static/css/main.8b30a3b9.css",
+    "static/js/main.0fa85a63.js"
   ]
 }
