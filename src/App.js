@@ -16,8 +16,8 @@ function App() {
     ServicesSection, // services offered by the company
     InsuranceSection, // insurance information
     MembershipSection, // membership or subscription information
-    LocationSection, // location information
     WaitingListSection, // waiting list or sign-up form
+    LocationSection, // location information
   ];
 
   return (
