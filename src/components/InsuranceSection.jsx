@@ -7,39 +7,40 @@ export default function WaitingListSection() {
       {/* Insurance Plans Banner */}
       <div className="mx-auto max-w-[1270px] px-[30px] pb-[62px] pt-[34px] md:pt-[62px] md:text-center">
         <h2
-          className="mb-[35px] font-reckless text-[40px] leading-[45px] text-white 
+          className="mb-[35px] font-reckless text-[40px] leading-[45px] text-black 
                      md:mb-[50px] md:text-[50px] md:leading-[55px]"
         >
           We Accept Medicare and Many Medicare Advantage Plans, Including:
         </h2>
-        <div className="flex flex-wrap items-center justify-start gap-8 md:justify-center md:gap-10 lg:gap-14 lg:gap-x-20">
+        <div className="flex flex-wrap items-center justify-start gap-10 md:justify-center lg:gap-14 lg:gap-x-20">
           <img
-            src={`${process.env.PUBLIC_URL}/images/blue-cross-blue-shield-logo.svg`}
+            src={`${process.env.PUBLIC_URL}/images/blue-cross-blue-shield-logo-black.png`}
             alt="Blue Cross Blue Shield insurance logo"
             className="h-[42px] w-auto md:h-[41px]"
           />
           <img
-            src={`${process.env.PUBLIC_URL}/images/united-healthcare-logo.svg`}
+            src={`${process.env.PUBLIC_URL}/images/united-healthcare-logo-black.png`}
             alt="United Healthcare insurance logo"
             className="h-auto w-[192px] md:w-[160px]"
           />
           <img
-            src={`${process.env.PUBLIC_URL}/images/allina-aetna-logo.svg`}
+            src={`${process.env.PUBLIC_URL}/images/allina-aetna-logo-black.png`}
             alt="Allina Aetna insurance logo"
             className="h-auto w-[324px] md:w-[498px]"
           />
           <img
-            src={`${process.env.PUBLIC_URL}/images/ucare-logo.svg`}
+            src={`${process.env.PUBLIC_URL}/images/ucare-logo-black.png`}
+            
             alt="UCare insurance logo"
             className="h-auto w-[179px] md:w-[211px]"
           />
           <img
-            src={`${process.env.PUBLIC_URL}/images/health-partners-logo.svg`}
+            src={`${process.env.PUBLIC_URL}/images/health-partners-logo-black.png`}
             alt="Health Partners insurance logo"
-            className="h-auto w-[250px] md:w-[269px]"
+            className="h-auto w-[300px] md:w-[350px]"
           />
           <img
-            src={`${process.env.PUBLIC_URL}/images/humana-logo.svg`}
+            src={`${process.env.PUBLIC_URL}/images/humana-logo-black.png`}
             alt="Humana insurance logo"
             className="h-auto w-[194px] md:w-[206px]"
           />

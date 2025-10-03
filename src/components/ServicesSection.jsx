@@ -4,7 +4,7 @@
 export default function ServicesSection() {
   return (
     <section
-      className="m-auto flex flex-col items-center gap-[40px] bg-tan px-[30px] py-[40px] 
+      className="m-auto flex flex-col items-center gap-[40px] bg-white px-[30px] py-[40px] 
                  xl:flex-row xl:items-center xl:justify-center xl:gap-[54px] xl:px-[155px] xl:py-[90px]"
     >
       {/* Responsive service image */}
