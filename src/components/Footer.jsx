@@ -1,9 +1,11 @@
+import LocationSection from './LocationsSection';
+
 // footer component, displayed at the bottom of the page
 // contains site logo and optional links
 export default function Footer() {
   return (
     // semantic footer element for accessibility
-    <footer className="w-full z-[11] bg-pink flex items-center justify-center py-[45px]">
+    <footer className="w-full z-[11] bg-pink flex items-center justify-center py-[45px] flex-col">
       {/* container for logo and optional navigation */}
       <div className="w-full mx-auto flex items-center justify-center flex-col">
         {/* site logo linking to home page */}
@@ -19,6 +21,8 @@ export default function Footer() {
 
         <p className="text-white mt-2">Because your best self deserves the best care</p>
       </div>
+
+      <LocationSection />
     </footer>
   );
 }

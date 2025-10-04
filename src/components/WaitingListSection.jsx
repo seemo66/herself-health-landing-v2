@@ -4,11 +4,11 @@ import WaitingListForm from './WaitingListForm';
 
 export default function WaitingListSection() {
   return (
-    <section id="waiting-list" className="bg-white">
+    <section className="bg-white">
       {/* Hero wrapper with relative positioning for overlay form */}
       <div className="relative">
         {/* Hero image */}
-        <div className="w-full">
+        <div className="w-full" >
           <picture>
             {/* Desktop image */}
             <source
@@ -25,10 +25,10 @@ export default function WaitingListSection() {
         </div>
 
         {/* Overlay container for testimonial + form */}
-        <div
+        <div id="waiting-list"
           className="w-full py-[34px] px-[30px] 
                      md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 
-                     md:px-0 md:py-0 md:max-w-[822px] lg:left-[146px]"
+                     lg:px-0 md:px-[30px] md:py-0 md:max-w-[822px] lg:left-[146px]"
         >
           {/* Testimonial block */}
           <div className="mb-[35px] lg:mb-[40px] md:text-center md:hidden">
@@ -46,8 +46,21 @@ export default function WaitingListSection() {
             </p>
           </div>
 
-          <a href="tel:+18882091209" className="block mx-auto w-fit mb-[40px]">
-            <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-5">
+          {/* Headline */}
+            <h2 
+              className="font-reckless font-medium text-[40px] text-pink mb-[25px] 
+                         md:mb-[18px] md:text-[50px] leading-[45px]"
+            >
+              Call Today to Schedule Your Appointment
+            </h2>
+            {/* Description */}
+            <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px] lg:text-[20px]">
+              Join Herself Health today and experience primary care designed for you, and
+              coordinated with your specialists, so your whole health feels connected.
+            </p>
+
+          <a href="tel:+18882091209" className="block w-fit mb-[40px]">
+            <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
               <img
                 src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
                 alt="telephone icon"
@@ -58,26 +71,13 @@ export default function WaitingListSection() {
             </button>
           </a>
 
-          <h3 className="font-untitled font-semibold text-[18px] text-black leading-6 mb-[30px] lg:text-[20px] md:text-center">
+          <h3 className="font-untitled font-semibold text-[18px] text-black leading-6 mb-[30px] lg:text-[20px] ">
             Want to connect online instead? Fill out the form below and we’ll be in touch promptly
             to help you get started.
           </h3>
 
           {/* Form box */}
           <div className="md:border-[2px] bg-white border-pink rounded-[10px] md:px-[83px] md:py-[61px]">
-            {/* Headline */}
-            <h2
-              className="font-reckless font-medium text-[40px] text-pink mb-[16px] 
-                         md:mb-[18px] md:text-[50px] leading-[45px]"
-            >
-              Call Today to Schedule Your Appointment
-            </h2>
-
-            {/* Description */}
-            <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[16px] lg:text-[20px]">
-              Join Herself Health today and experience primary care designed for you, and
-              coordinated with your specialists, so your whole health feels connected.
-            </p>
 
             {/* Embedded form */}
             <WaitingListForm />

@@ -6,7 +6,6 @@ import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import InsuranceSection from './components/InsuranceSection';
 import MembershipSection from './components/MembershipSection';
-import LocationSection from './components/LocationsSection';
 import WaitingListSection from './components/WaitingListSection';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
     InsuranceSection, // insurance information
     MembershipSection, // membership or subscription information
     WaitingListSection, // waiting list or sign-up form
-    LocationSection, // location information
   ];
 
   return (

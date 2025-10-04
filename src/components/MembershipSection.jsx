@@ -78,7 +78,7 @@ export default function MembershipSection() {
           Because your best self deserves the best care.
         </p>
 
-        <button
+        <button 
           className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[242px]"
           onClick={() =>
             document.getElementById('waiting-list')?.scrollIntoView({ behavior: 'smooth' })

@@ -2,17 +2,17 @@
 // Displays a list of clinic locations with addresses
 export default function LocationSection() {
   return (
-    <section className="max-w-[1728px] mx-auto bg-darkPink px-[30px] py-[35px]">
+    <section className="max-w-[1728px] bg-pink py-[35px] w-[333px] md:w-[75%]">
       {/* Section Heading */}
-      <h2 className="font-reckless text-[40px] text-white lg:text-center lg:text-[60px]">
+      <h2 className="font-reckless text-[35px] text-white md:text-center">
         Locations
       </h2>
 
       {/* Locations List */}
       <ul
         className="flex flex-col font-untitled text-[18px] text-white leading-7 mt-6
-                   lg:text-center lg:flex-row lg:flex-wrap lg:gap-x-12 lg:justify-center 
-                   lg:items-start lg:text-[20px] lg:leading-8"
+                   md:text-center md:flex-row md:flex-wrap md:gap-x-12 md:justify-center 
+                   md:items-start md:leading-8"
       >
         {/* Highland Park */}
         <li className="mb-[25px]">
