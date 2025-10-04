@@ -48,8 +48,8 @@ export default function WaitingListSection() {
 
           {/* Headline */}
             <h2 
-              className="font-reckless font-medium text-[40px] text-pink mb-[25px] 
-                         md:mb-[18px] md:text-[50px] leading-[45px]"
+              className="font-reckless font-medium text-[40px] text-pink mb-[35px] 
+                          md:text-[50px] leading-[45px]"
             >
               Call Today to Schedule Your Appointment
             </h2>
@@ -59,7 +59,7 @@ export default function WaitingListSection() {
               coordinated with your specialists, so your whole health feels connected.
             </p>
 
-          <a href="tel:+18882091209" className="block w-fit mb-[40px]">
+          <a href="tel:+18882091209" className="block w-fit mb-[35px]">
             <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
               <img
                 src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
