@@ -4,15 +4,13 @@ export default function LocationSection() {
   return (
     <section className="max-w-[1728px] bg-pink py-[35px] w-[333px] md:w-[75%]">
       {/* Section Heading */}
-      <h2 className="font-reckless text-[35px] text-white md:text-center">
-        Locations
-      </h2>
+      <h2 className="font-reckless text-[35px] text-white md:text-center">Locations</h2>
 
       {/* Locations List */}
       <ul
         className="flex flex-col font-untitled text-[18px] text-white leading-7 mt-6
-                   md:text-center md:flex-row md:flex-wrap md:gap-x-12 md:justify-center 
-                   md:items-start md:leading-8"
+                   md:text-center md:flex-row md:flex-wrap md:gap-12 md:justify-center 
+                   md:leading-8"
       >
         {/* Highland Park */}
         <li className="mb-[25px]">
@@ -45,7 +43,7 @@ export default function LocationSection() {
         <li className="mb-[25px]">
           <span className="font-medium text-[22px]">Lyndale (South Minneapolis):</span>
           <br />
-          5452 Lyndale Avenue S,
+          5450 Lyndale Avenue S,
           <br />
           Minneapolis, MN 55419
         </li>

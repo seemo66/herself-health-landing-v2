@@ -92,14 +92,14 @@ export default function WaitingListForm() {
         const utmData = getUTMData();
         window.dataLayer.push({
           event: 'form_start',
-          form_name: 'tv_waitlist',
-          form_id: 'tv-waitlist-form',
+          form_name: 'care_waitlist',
+          form_id: 'care-waitlist-form',
           utm_source: utmData.utm_source,
           utm_medium: utmData.utm_medium,
           utm_campaign: utmData.utm_campaign,
           fb_ad_id: utmData.fb_ad_id,
           campaign_id: utmData.campaign_id,
-          page_type: 'tv_landing',
+          page_type: 'care_landing',
         });
       }
     }
@@ -122,13 +122,13 @@ export default function WaitingListForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id: 'tv-waitlist-form', // Form identifier
+          id: 'care-waitlist-form', // Form identifier
           fields: JSON.stringify(formData), // Salesforce fields
-          form_title: 'TV Waitlist', // Form title for tracking
+          form_title: 'Care Waitlist', // Form title for tracking
           utm_data: JSON.stringify(utmData), // UTM tracking data
-          page_lead_source: 'tv', // Lead source for this page
+          page_lead_source: 'care', // Lead source for this page
           page_campaign_id: '', // No specific campaign for tv page
-          form_source: 'tv_waitlist', // Specific form source identifier
+          form_source: 'care_waitlist', // Specific form source identifier
         }),
       });
 
@@ -140,14 +140,14 @@ export default function WaitingListForm() {
         if (typeof window !== 'undefined' && window.dataLayer) {
           window.dataLayer.push({
             event: 'form_submit_success',
-            form_name: 'tv_waitlist',
-            form_id: 'tv-waitlist-form',
+            form_name: 'care_waitlist',
+            form_id: 'care-waitlist-form',
             utm_source: utmData.utm_source,
             utm_medium: utmData.utm_medium,
             utm_campaign: utmData.utm_campaign,
             fb_ad_id: utmData.fb_ad_id,
             campaign_id: utmData.campaign_id,
-            page_type: 'tv_landing',
+            page_type: 'care_landing',
           });
         }
 
@@ -156,7 +156,7 @@ export default function WaitingListForm() {
 
         // reset form and hide success message after 5 seconds
         timerRef.current = setTimeout(() => {
-          setSubmitted(false);
+          // setSubmitted(false);
           setFormData({ FirstName: '', LastName: '', Email: '', Phone: '' });
         }, 5000);
       } else {
@@ -181,12 +181,35 @@ export default function WaitingListForm() {
     <div className="relative flex items-center justify-center md:justify-start">
       {/* success message overlay */}
       <div
-        className={`absolute transition-opacity duration-700 ease-in-out font-untitled text-[24px]
-                    text-darkPink text-lg font-medium mb-3 xl:text-[30px] xl:leading-tight text-center ${
-                      submitted ? 'opacity-100' : 'opacity-0'
+        className={`absolute transition-opacity duration-700 ease-in-out font-reckless text-[24px]
+                    text-darkPink text-lg font-medium mb-3 xl:leading-tight
+                    ${
+                      submitted
+                        ? 'opacity-100 pointer-events-auto'
+                        : 'opacity-0 pointer-events-none'
                     }`}
       >
-        Thank you! Your form has been submitted.
+        <p className="pb-5 text-xl">Thank you!</p>
+        <p className="pb-5">
+          Your form has been submitted - <br />
+          Your free guide is ready to download
+        </p>
+        <a
+          href="/files/herself-health-guide.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-dusty-indego"
+        >
+          [Click here to download your free guide to feeling your best]
+        </a>
+        <p className="py-5">
+          We'll reach out soon to answer any questions and help you schedule your first visit.
+        </p>
+
+        <p className="text-xl">Prefer to call now?</p>
+        <a className="text-xl" href="tel:8882901209">
+          (888) 290-1209
+        </a>
       </div>
 
       {/* error message */}
@@ -241,8 +264,7 @@ export default function WaitingListForm() {
           {isLoading ? 'Submitting...' : 'Submit'}
         </button>
         <p className="md:col-span-2">
-          For fastest service, please call us directly. Otherwise, a team member will reach out as
-          quickly as possible.
+          We’ll send your guide and follow up to help schedule your visit.
         </p>
       </form>
     </div>

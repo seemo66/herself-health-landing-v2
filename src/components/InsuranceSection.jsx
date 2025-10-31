@@ -16,56 +16,58 @@ export default function WaitingListSection() {
           <img
             src={`${process.env.PUBLIC_URL}/images/blue-cross-blue-shield-logo-black.png`}
             alt="Blue Cross Blue Shield insurance logo"
-            className="h-[42px] w-auto md:h-[41px]"
+            className="h-[30px] w-auto"
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/united-healthcare-logo-black.png`}
             alt="United Healthcare insurance logo"
-            className="h-auto w-[192px] md:w-[160px]"
+            className="h-auto w-[130px]"
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/allina-aetna-logo-black.png`}
             alt="Allina Aetna insurance logo"
-            className="h-auto w-[324px] md:w-[498px]"
+            className="h-auto w-[324px]"
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/ucare-logo-black.png`}
-            
             alt="UCare insurance logo"
-            className="h-auto w-[179px] md:w-[211px]"
+            className="h-auto w-[140px]"
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/health-partners-logo-black.png`}
             alt="Health Partners insurance logo"
-            className="h-auto w-[300px] md:w-[350px]"
+            className="h-auto w-[300px]"
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/humana-logo-black.png`}
             alt="Humana insurance logo"
-            className="h-auto w-[194px] md:w-[206px]"
+            className="h-auto w-[135px]"
           />
         </div>
       </div>
 
       {/* Coverage Fallback / Contact Section */}
-      <div className="mx-auto max-w-[1728px] bg-dusty-indego px-[30px] pb-[60px] pt-[34px] md:text-center">
+      <div className="mx-auto max-w-[1728px] bg-lightPink px-[30px] pb-[60px] pt-[34px] md:text-center">
         <div className="mx-auto max-w-[1100px]">
-          <h2 className="mb-[16px] font-reckless text-[40px] leading-tight text-white md:mb-[20px] md:text-[60px]">
+          <h2 className="mb-[16px] font-reckless text-[40px] leading-tight text-pink md:mb-[30px] md:text-[60px]">
             Don’t See Your Plan?
           </h2>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-center">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
-              alt="telephone icon"
-              aria-hidden="true"
-              className="mb-[10px] h-auto w-[45px] md:mb-0 md:mr-[20px] md:w-[80px]"
-            />
-            <p className="font-untitled text-[26px] font-normal leading-tight text-white md:mb-[20px] md:text-[40px]">
-              Call us at <span className="font-bold">888-290-1209</span> to confirm coverage —
-              <br />
-              we’ll walk you through your options.
-            </p>
-          </div>
+          <p className="font-untitled text-[18px] font-normal leading-6 text-black mb-8 md:mb-[40px] md:text-[20px]">
+            Call us at <span className="font-bold">888-290-1209</span> to confirm coverage —
+            <br />
+            we’ll walk you through your options.
+          </p>
+          <a href="tel:+18882091209" className="block w-fit m-auto">
+            <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
+                alt="telephone icon"
+                aria-hidden="true"
+                className="h-auto w-[30px]"
+              />
+              Call Now: (888) 209-1209
+            </button>
+          </a>
         </div>
       </div>
     </section>

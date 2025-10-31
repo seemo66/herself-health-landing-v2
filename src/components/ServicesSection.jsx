@@ -4,7 +4,7 @@
 export default function ServicesSection() {
   return (
     <section
-      className="m-auto flex flex-col items-center gap-[40px] bg-white px-[30px] py-[40px] 
+      className="m-auto flex flex-col items-center gap-[40px] bg-white px-[30px] pt-[50px] py-[40px] 
                  xl:flex-row xl:items-center xl:justify-center xl:gap-[54px] xl:px-[155px] xl:py-[90px]"
     >
       {/* Responsive service image */}
@@ -27,7 +27,7 @@ export default function ServicesSection() {
         </h2>
 
         <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
-          Our providers specialize in comprehensive healthcare for women 60+, creating personalized
+          Our providers specialize in comprehensive healthcare for women 65+, creating personalized
           treatment plans that address your current conditions, prevent future issues, and support
           your health goals.
         </p>
