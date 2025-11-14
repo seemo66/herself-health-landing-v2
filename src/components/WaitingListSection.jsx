@@ -64,7 +64,7 @@ export default function WaitingListSection() {
             with your specialists, so your whole health feels connected.
           </p>
 
-          <a href="tel:+18882091209" className="block w-fit mb-[35px]">
+          <a href="tel:+18882901209" className="block w-fit mb-[35px]">
             <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
               <img
                 src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
@@ -72,7 +72,7 @@ export default function WaitingListSection() {
                 aria-hidden="true"
                 className="h-auto w-[30px]"
               />
-              Call Now: (888) 209-1209
+              Call Now: (888) 290-1209
             </button>
           </a>
 

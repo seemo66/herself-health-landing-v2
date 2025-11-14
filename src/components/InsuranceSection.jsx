@@ -7,7 +7,7 @@ export default function WaitingListSection() {
       {/* Insurance Plans Banner */}
       <div className="mx-auto max-w-[1270px] px-[30px] pb-[62px] pt-[34px] md:pt-[62px] md:text-center">
         <h2
-          className="mb-[35px] font-reckless text-[40px] leading-[45px] text-black 
+          className="mb-[35px] font-reckless text-[40px] leading-[45px] text-pink 
                      md:mb-[50px] md:text-[50px] md:leading-[55px]"
         >
           We Accept Medicare and Many Medicare Advantage Plans, Including:
@@ -49,7 +49,7 @@ export default function WaitingListSection() {
       {/* Coverage Fallback / Contact Section */}
       <div className="mx-auto max-w-[1728px] bg-lightPink px-[30px] pb-[60px] pt-[34px] md:text-center">
         <div className="mx-auto max-w-[1100px]">
-          <h2 className="mb-[16px] font-reckless text-[40px] leading-tight text-pink md:mb-[30px] md:text-[60px]">
+          <h2 className="mb-[16px] font-reckless text-[40px] leading-tight text-pink md:mb-[30px] md:text-[50px]">
             Don’t See Your Plan?
           </h2>
           <p className="font-untitled text-[18px] font-normal leading-6 text-black mb-8 md:mb-[40px] md:text-[20px]">
@@ -57,7 +57,7 @@ export default function WaitingListSection() {
             <br />
             we’ll walk you through your options.
           </p>
-          <a href="tel:+18882091209" className="block w-fit m-auto">
+          <a href="tel:+18882901209" className="block w-fit m-auto">
             <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
               <img
                 src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
@@ -65,7 +65,7 @@ export default function WaitingListSection() {
                 aria-hidden="true"
                 className="h-auto w-[30px]"
               />
-              Call Now: (888) 209-1209
+              Call Now: (888) 290-1209
             </button>
           </a>
         </div>

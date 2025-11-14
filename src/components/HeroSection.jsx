@@ -63,7 +63,7 @@ export default function HeroSection() {
               document.getElementById('call-now')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Get My Free Guide & Next Steps
+            Become a Patient
           </button>
         </div>
       </div>

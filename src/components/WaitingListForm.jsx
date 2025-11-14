@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 function getUTMData() {
   if (typeof window === 'undefined') return {};
 
-  // First try to get from sessionStorage (set by tv.html script)
+  // First try to get from sessionStorage
   const storedData = sessionStorage.getItem('utm_tracking');
   if (storedData) {
     try {
@@ -92,14 +92,14 @@ export default function WaitingListForm() {
         const utmData = getUTMData();
         window.dataLayer.push({
           event: 'form_start',
-          form_name: 'care_waitlist',
-          form_id: 'care-waitlist-form',
+          form_name: 'guide_waitlist',
+          form_id: 'guide-waitlist-form',
           utm_source: utmData.utm_source,
           utm_medium: utmData.utm_medium,
           utm_campaign: utmData.utm_campaign,
           fb_ad_id: utmData.fb_ad_id,
           campaign_id: utmData.campaign_id,
-          page_type: 'care_landing',
+          page_type: 'guide_landing',
         });
       }
     }
@@ -122,13 +122,13 @@ export default function WaitingListForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id: 'care-waitlist-form', // Form identifier
+          id: 'guide-waitlist-form', // Form identifier
           fields: JSON.stringify(formData), // Salesforce fields
-          form_title: 'Care Waitlist', // Form title for tracking
+          form_title: 'Guide Waitlist', // Form title for tracking
           utm_data: JSON.stringify(utmData), // UTM tracking data
-          page_lead_source: 'care', // Lead source for this page
-          page_campaign_id: '', // No specific campaign for tv page
-          form_source: 'care_waitlist', // Specific form source identifier
+          page_lead_source: 'Guide', // utmData.utm_source, // Lead source for this page
+          page_campaign_id: '', // No specific campaign for guide page
+          form_source: 'guide_waitlist', // Specific form source identifier
         }),
       });
 
@@ -140,14 +140,14 @@ export default function WaitingListForm() {
         if (typeof window !== 'undefined' && window.dataLayer) {
           window.dataLayer.push({
             event: 'form_submit_success',
-            form_name: 'care_waitlist',
-            form_id: 'care-waitlist-form',
+            form_name: 'guide_waitlist',
+            form_id: 'guide-waitlist-form',
             utm_source: utmData.utm_source,
             utm_medium: utmData.utm_medium,
             utm_campaign: utmData.utm_campaign,
             fb_ad_id: utmData.fb_ad_id,
             campaign_id: utmData.campaign_id,
-            page_type: 'care_landing',
+            page_type: 'guide_landing',
           });
         }
 
