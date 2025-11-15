@@ -7,7 +7,7 @@ import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import InsuranceSection from './components/InsuranceSection';
 import MembershipSection from './components/MembershipSection';
-import FormGuideSectionDesktop from './components/FormGuideSectionDesktop';
+// import FormGuideSectionDesktop from './components/FormGuideSectionDesktop';
 import WaitingListSection from './components/WaitingListSection';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     ServicesSection, // services offered by the company
     MembershipSection, // membership or subscription information
     InsuranceSection, // insurance information
-    FormGuideSectionDesktop, // desktop version of the form guide section
+    // FormGuideSectionDesktop, // desktop version of the form guide section
   ];
 
   return (

@@ -77,6 +77,18 @@ export default function MembershipSection() {
         <p className="font-untitled text-[18px] font-bold leading-6 text-black md:text-[20px]">
           Because your best self deserves the best care.
         </p>
+
+        {/* call-to-action button */}
+          <button
+            className="w-full md:w-[385px] h-auto bg-purple text-white font-untitled text-[22px] 
+                       py-3 px-4 rounded-lg shadow-lg hover:bg-purple-dark transition-colors duration-300 mt-8"
+            onClick={() => {
+              // scroll to waiting list section smoothly when button is clicked
+              document.getElementById('call-now')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            Become a Patient
+          </button>
       </div>
     </section>
   );

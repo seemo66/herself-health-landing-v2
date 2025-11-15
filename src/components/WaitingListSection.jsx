@@ -53,7 +53,7 @@ export default function WaitingListSection() {
             className="font-reckless font-medium text-[40px] text-pink mb-[35px] 
                           md:text-[50px] leading-[45px]"
           >
-            Call Today to Schedule Your Appointment
+            Schedule Your Appointment
           </h2>
           {/* Description */}
           <p
@@ -64,7 +64,7 @@ export default function WaitingListSection() {
             with your specialists, so your whole health feels connected.
           </p>
 
-          <a href="tel:+18882901209" className="block w-fit mb-[35px]">
+          {/* <a href="tel:+18882901209" className="block w-fit mb-[35px]">
             <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
               <img
                 src={`${process.env.PUBLIC_URL}/images/telephone-white.svg`}
@@ -74,7 +74,7 @@ export default function WaitingListSection() {
               />
               Call Now: (888) 290-1209
             </button>
-          </a>
+          </a> */}
 
           <h3 className="font-untitled font-semibold text-[18px] text-black leading-6 mb-[30px] lg:text-[20px] ">
             Want to connect online instead? Fill out the form below and we’ll be in touch promptly
