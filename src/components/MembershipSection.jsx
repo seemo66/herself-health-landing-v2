@@ -37,7 +37,7 @@ export default function MembershipSection() {
           <div key={idx} className="flex w-full flex-col items-center gap-[5px] text-center">
             <div className="mx-auto flex h-[89px] w-[89px] items-center justify-center rounded-full bg-dusty-indego lg:h-[116px] lg:w-[116px]">
               <img
-                src={`/images/newpatients/${stat.icon}`}
+                src={`/images/tv/${stat.icon}`}
                 alt={stat.alt}
                 className="h-auto w-[46px] lg:w-[60px]"
               />
