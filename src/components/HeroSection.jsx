@@ -10,12 +10,12 @@ export default function HeroSection() {
         <picture>
           {/* desktop image source with media query */}
           <source
-            srcSet="/images/tv/new-hero-desktop.webp"
+            srcSet="/images/mail/new-hero-desktop.webp"
             media="(min-width: 768px)"
           />
           {/* mobile image (default) */}
           <img
-            src="/images/tv/new-hero-mobile.webp"
+            src="/images/mail/new-hero-mobile.webp"
             alt="A woman happily smiling."
             className="block w-full md:min-h-[525px] object-cover"
           />

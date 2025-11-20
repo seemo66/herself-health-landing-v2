@@ -14,32 +14,32 @@ export default function WaitingListSection() {
         </h2>
         <div className="flex flex-wrap items-center justify-start gap-10 md:justify-center lg:gap-14 lg:gap-x-20">
           <img
-            src="/images/tv/blue-cross-blue-shield-logo-black.png"
+            src="/images/mail/blue-cross-blue-shield-logo-black.png"
             alt="Blue Cross Blue Shield insurance logo"
             className="h-[30px] w-auto"
           />
           <img
-            src="/images/tv/united-healthcare-logo-black.png"
+            src="/images/mail/united-healthcare-logo-black.png"
             alt="United Healthcare insurance logo"
             className="h-auto w-[130px]"
           />
           <img
-            src="/images/tv/allina-aetna-logo-black.png"
+            src="/images/mail/allina-aetna-logo-black.png"
             alt="Allina Aetna insurance logo"
             className="h-auto w-[324px]"
           />
           <img
-            src="/images/tv/ucare-logo-black.png"
+            src="/images/mail/ucare-logo-black.png"
             alt="UCare insurance logo"
             className="h-auto w-[140px]"
           />
           <img
-            src="/images/tv/health-partners-logo-black.png"
+            src="/images/mail/health-partners-logo-black.png"
             alt="Health Partners insurance logo"
             className="h-auto w-[300px]"
           />
           <img
-            src="/images/tv/humana-logo-black.png"
+            src="/images/mail/humana-logo-black.png"
             alt="Humana insurance logo"
             className="h-auto w-[135px]"
           />
@@ -60,7 +60,7 @@ export default function WaitingListSection() {
           <a href="tel:+18882091209" className="block w-fit m-auto">
             <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
               <img
-                src="/images/tv/telephone-white.svg"
+                src="/images/mail/telephone-white.svg"
                 alt="telephone icon"
                 aria-hidden="true"
                 className="h-auto w-[30px]"

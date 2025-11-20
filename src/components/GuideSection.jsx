@@ -7,7 +7,7 @@ export default function GuideSection() {
       <div className="block md:flex gap-4 md:gap-16">
         <div>
           <img
-            src="/images/tv/guide-cover.webp"
+            src="/images/mail/guide-cover.webp"
             alt="lady smiling"
             className="w-full h-auto rounded-lg"
           />
