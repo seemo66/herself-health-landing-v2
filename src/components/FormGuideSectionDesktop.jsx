@@ -7,7 +7,7 @@ export default function FormGuideSection() {
       <div className="flex gap-16 flex-col lg:flex-row">
         <div>
           <img
-            src="/images/guide/guide-cover.webp"
+            src="/images/newpatients/guide-cover.webp"
             alt="lady smiling"
             className="w-full h-auto rounded-lg"
           />
