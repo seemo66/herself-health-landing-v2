@@ -20,7 +20,7 @@ export default function Header() {
           className="flex items-center mb-[12px] lg:mb-0"
         >
           <img
-            src="/images/care/logo-pink.svg"
+            src="/images/email/logo-pink.svg"
             alt="Herself Health logo"
             className="h-auto w-auto"
           />
@@ -30,7 +30,7 @@ export default function Header() {
         {/* Phone */}
         <a href="tel:8882901209" aria-label="Herself Health phone" className="flex items-center">
           <img
-            src="/images/care/telephone.svg"
+            src="/images/email/telephone.svg"
             alt="telephone icon"
             className="h-auto w-auto mr-4"
           />

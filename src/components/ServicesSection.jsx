@@ -10,11 +10,11 @@ export default function ServicesSection() {
       {/* Responsive service image */}
       <picture className="block aspect-[1.34] w-full md:aspect-auto md:w-[50%]">
         <source
-          srcSet="/images/care/services-desktop.webp"
+          srcSet="/images/email/services-desktop.webp"
           media="(min-width: 768px)"
         />
         <img
-          src="/images/care/services-mobile.webp"
+          src="/images/email/services-mobile.webp"
           alt="A nurse assists an older woman as they both review medical information on a tablet."
           className="h-full w-full rounded-[10px] object-cover lg:max-w-[643px]"
         />
@@ -45,7 +45,7 @@ export default function ServicesSection() {
           ].map((item, idx) => (
             <li key={idx} className="flex items-center space-x-3">
               <img
-                src="/images/care/checkmark-pink.svg"
+                src="/images/email/checkmark-pink.svg"
                 alt="" // decorative, so we leave empty alt
                 aria-hidden="true"
                 className="h-5 w-5"
