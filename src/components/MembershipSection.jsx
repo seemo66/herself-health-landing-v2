@@ -30,14 +30,14 @@ export default function MembershipSection() {
   ];
 
   return (
-    <section className="flex flex-col bg-tan px-[30px] py-[60px] md:py-[72px] lg:flex-row items-center">
+    <section className="flex flex-col bg-tan px-[30px] py-[60px] pb-[40px] md:py-[72px] lg:flex-row items-center">
       {/* Stats Grid */}
       <div className="mb-[47px] grid grid-cols-2 gap-16 px-[30px] md:gap-[100px] lg:mx-auto lg:mb-0 lg:w-[50%] lg:max-w-[550px] lg:place-items-center lg:gap-8 lg:gap-x-0 lg:px-0 lg:text-center">
         {stats.map((stat, idx) => (
           <div key={idx} className="flex w-full flex-col items-center gap-[5px] text-center">
             <div className="mx-auto flex h-[89px] w-[89px] items-center justify-center rounded-full bg-dusty-indego lg:h-[116px] lg:w-[116px]">
               <img
-                src={`/images/mail/${stat.icon}`}
+                src={`/images/directmail/${stat.icon}`}
                 alt={stat.alt}
                 className="h-auto w-[46px] lg:w-[60px]"
               />

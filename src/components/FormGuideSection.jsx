@@ -6,7 +6,7 @@ export default function FormGuideSection() {
       </h2>
       <div>
         <img
-          src="/images/mail/guide-cover.webp"
+          src="/images/directmail/guide-cover.webp"
           alt="lady smiling"
           className="w-full h-auto rounded-lg mb-8"
         />
