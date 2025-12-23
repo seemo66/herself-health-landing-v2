@@ -112,23 +112,21 @@ export default function WaitingListForm() {
     setError('');
 
     try {
-      // Get UTM data for tracking
       const utmData = getUTMData();
 
-      // Submit to Salesforce API with proper structure
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id: 'guide-waitlist-form', // Form identifier
-          fields: JSON.stringify(formData), // Salesforce fields
-          form_title: 'Guide Waitlist', // Form title for tracking
-          utm_data: JSON.stringify(utmData), // UTM tracking data
-          page_lead_source: 'Guide', // utmData.utm_source, // Lead source for this page
-          page_campaign_id: '', // No specific campaign for guide page
-          form_source: 'guide_waitlist', // Specific form source identifier
+          id: 'guide-waitlist-form',
+          fields: JSON.stringify(formData),
+          form_title: 'Guide Waitlist',
+          utm_data: JSON.stringify(utmData),
+          page_lead_source: 'Guide',
+          page_campaign_id: '',
+          form_source: 'guide_waitlist',
         }),
       });
 
@@ -156,8 +154,13 @@ export default function WaitingListForm() {
 
         // reset form and hide success message after 5 seconds
         timerRef.current = setTimeout(() => {
-          // setSubmitted(false);
-          setFormData({ FirstName: '', LastName: '', Email: '', Phone: '' });
+          setSubmitted(false);
+          setFormData({
+            FirstName: '',
+            LastName: '',
+            Email: '',
+            Phone: '',
+          });
         }, 5000);
       } else {
         const errorData = await response.text();
@@ -174,7 +177,9 @@ export default function WaitingListForm() {
 
   // cleanup timer on component unmount
   useEffect(() => {
-    return () => clearTimeout(timerRef.current);
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
   }, []);
 
   return (
@@ -182,34 +187,11 @@ export default function WaitingListForm() {
       {/* success message overlay */}
       <div
         className={`absolute transition-opacity duration-700 ease-in-out font-reckless text-[24px]
-                    text-darkPink text-lg font-medium mb-3 xl:leading-tight
-                    ${
-                      submitted
-                        ? 'opacity-100 pointer-events-auto'
-                        : 'opacity-0 pointer-events-none'
-                    }`}
+          text-darkPink text-lg font-medium mb-3 xl:leading-tight
+          ${submitted ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
       >
-        <p className="pb-5 text-xl">Thank you!</p>
-        <p className="pb-5">
-          Your form has been submitted - <br />
-          Your free guide is ready to download
-        </p>
-        <a
-          href="/files/herself-health-guide.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline text-dusty-indego"
-        >
-          [Click here to download your free guide to feeling your best]
-        </a>
-        <p className="py-5">
-          We'll reach out soon to answer any questions and help you schedule your first visit.
-        </p>
-
-        <p className="text-xl">Prefer to call now?</p>
-        <a className="text-xl" href="tel:8882901209">
-          (888) 290-1209
-        </a>
+        <p className="pb-5 text-2xl">Thank you!</p>
+        <p className="pb-5 text-2xl">Your form has been submitted</p>
       </div>
 
       {/* error message */}
@@ -222,13 +204,12 @@ export default function WaitingListForm() {
       {/* form container */}
       <form
         onSubmit={handleSubmit}
-        className={`w-full transition-opacity duration-700 ease-in-out ${
-          submitted ? 'opacity-0 pointer-events-none' : 'opacity-100'
-        } grid md:gap-x-[48px] md:grid-cols-2`}
+        className={`w-full transition-opacity duration-700 ease-in-out
+          ${submitted ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+          grid md:gap-x-[48px] md:grid-cols-2`}
       >
         {fields.map(({ id, label, type, placeholder, autoComplete }) => (
           <div key={id}>
-            {/* input label */}
             <label
               htmlFor={id}
               className="font-untitled font-normal text-[18px] text-black block mb-1"
@@ -236,7 +217,6 @@ export default function WaitingListForm() {
               {label}
             </label>
 
-            {/* input field */}
             <input
               id={id}
               name={id}
@@ -251,18 +231,19 @@ export default function WaitingListForm() {
           </div>
         ))}
 
-        {/* submit button */}
         <button
           type="submit"
           disabled={isLoading}
-          className={`p-[10px] rounded-[10px] w-full mt-2 mb-2 md:col-span-2 font-untitled font-medium text-[18px] transition-colors ${
-            isLoading
-              ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
-              : 'bg-purple text-white hover:bg-purple/90'
-          }`}
+          className={`p-[10px] rounded-[10px] w-full mt-2 mb-2 md:col-span-2 font-untitled font-medium text-[18px] transition-colors
+            ${
+              isLoading
+                ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
+                : 'bg-purple text-white hover:bg-purple/90'
+            }`}
         >
           {isLoading ? 'Submitting...' : 'Become a Patient'}
         </button>
+
         <p className="md:col-span-2 mt-3">
           We’ll send your guide and follow up to help schedule your visit.
         </p>
