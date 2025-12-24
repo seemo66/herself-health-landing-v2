@@ -81,7 +81,7 @@ export default function WaitingListSection() {
             to help you get started.
           </h3>
 
-          <FormGuideSection className="block md:hidden" />
+          {/* <FormGuideSection className="block md:hidden" /> */}
 
           {/* Form box */}
           <div className="md:border-[2px] bg-white border-pink rounded-[10px] md:px-[83px] md:py-[61px]">

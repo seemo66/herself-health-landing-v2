@@ -243,10 +243,6 @@ export default function WaitingListForm() {
         >
           {isLoading ? 'Submitting...' : 'Become a Patient'}
         </button>
-
-        <p className="md:col-span-2 mt-3">
-          We’ll send your guide and follow up to help schedule your visit.
-        </p>
       </form>
     </div>
   );
