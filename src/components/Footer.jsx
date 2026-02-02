@@ -11,7 +11,7 @@ export default function Footer() {
         {/* site logo linking to home page */}
         <a href="/" aria-label="Herself Health home" className="flex items-center">
           <img
-            src={`images/landingpage/logo-white.svg`} // logo image from public folder
+            src="images/landingpage/logo-white.svg" // logo image from public folder
             alt="Herself Health logo"
             className="w-auto h-auto"
           />
