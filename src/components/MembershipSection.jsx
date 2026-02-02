@@ -63,7 +63,7 @@ export default function MembershipSection() {
 
         <p className="mb-[16px] font-untitled text-[18px] font-normal leading-6 text-black md:mb-[18px] md:text-[20px]">
           You’ve spent a lifetime caring for others—now it’s time to focus on you. At Herself
-          Health, we care for women 65+ with <strong>longer visits, real listening</strong>, and a
+          Health, we care for women 50+ with <strong>longer visits, real listening</strong>, and a
           plan built around your goals.
         </p>
 
@@ -72,9 +72,9 @@ export default function MembershipSection() {
           confident about what comes next.
         </p>
 
-        <p className="font-untitled text-[18px] font-bold leading-6 text-black md:text-[20px]">
+        <h2 className="font-untitled text-[24px] text-darkPink text-lg font-medium mb-4 xl:text-[30px] xl:leading-tight">
           Because your best self deserves the best care.
-        </p>
+        </h2>
       </div>
     </section>
   );

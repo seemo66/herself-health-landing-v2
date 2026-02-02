@@ -1,13 +1,13 @@
 export default function GuideSection() {
   return (
     <section className="bg-tan py-0 pb-12 px-6 md:px-24 md:flex md:flex-col md:py-[100px]">
-      <p className="font-untitled text-black text-[18px] mb-6 md:font-reckless md:text-[40px] md:mb-8 md:leading-[50px] md:text-pink lg:text-[45px] md:text-center">
+      <h2 className="font-reckless text-[40px] text-pink text-4xl leading-tight mb-3 md:text-2xl md:text-center xl:text-5xl">
         Inside the Guide (and what happens next)
-      </p>
+      </h2>
       <div className="block gap-4 md:flex md:gap-16">
         <div>
           <img
-            src={`images/landingpage/guide-cover.webp`}
+            src="images/landingpage/guide-cover.webp"
             alt="lady smiling"
             className="w-full h-auto rounded-lg"
           />

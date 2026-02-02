@@ -92,14 +92,14 @@ export default function WaitingListForm() {
         const utmData = getUTMData();
         window.dataLayer.push({
           event: 'form_start',
-          form_name: 'care',
-          form_id: 'care-form',
+          form_name: 'medicare',
+          form_id: 'medicare-form',
           utm_source: utmData.utm_source,
           utm_medium: utmData.utm_medium,
           utm_campaign: utmData.utm_campaign,
           fb_ad_id: utmData.fb_ad_id,
           campaign_id: utmData.campaign_id,
-          page_type: 'care_landing',
+          page_type: 'medicare_landing',
         });
       }
     }
@@ -114,7 +114,7 @@ export default function WaitingListForm() {
     try {
       // Get UTM data for tracking
       const utmData = getUTMData();
-      const pageLeadSource = utmData && utmData.utm_source ? utmData.utm_source : 'Care';
+      const pageLeadSource = utmData && utmData.utm_source ? utmData.utm_source : 'medicare';
 
       // Submit to Salesforce API with proper structure
       const response = await fetch('/api/contact', {
@@ -123,13 +123,13 @@ export default function WaitingListForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id: 'care-form', // Form identifier
+          id: 'medicare-form', // Form identifier
           fields: JSON.stringify(formData), // Salesforce fields
-          form_title: 'Care', // Form title for tracking
+          form_title: 'Medicare', // Form title for tracking
           utm_data: JSON.stringify(utmData), // UTM tracking data
           page_lead_source: pageLeadSource, // utmData.utm_source || hardcoded string
           page_campaign_id: '', // No specific campaign for guide page
-          form_source: 'care', // Specific form source identifier
+          form_source: 'medicare', // Specific form source identifier
         }),
       });
 
@@ -141,14 +141,14 @@ export default function WaitingListForm() {
         if (typeof window !== 'undefined' && window.dataLayer) {
           window.dataLayer.push({
             event: 'form_submit_success',
-            form_name: 'care',
-            form_id: 'care-form',
+            form_name: 'medicare',
+            form_id: 'medicare-form',
             utm_source: utmData.utm_source,
             utm_medium: utmData.utm_medium,
             utm_campaign: utmData.utm_campaign,
             fb_ad_id: utmData.fb_ad_id,
             campaign_id: utmData.campaign_id,
-            page_type: 'care_landing',
+            page_type: 'medicare_landing',
           });
         }
 
@@ -287,7 +287,7 @@ export default function WaitingListForm() {
             </ul>
             </div>
             <img
-              src={`images/landingpage/guide-cover.webp`}
+              src="images/landingpage/guide-cover.webp"
               alt="lady smiling"
               className="w-1/2 h-auto mb-8 rounded-lg"
             />  

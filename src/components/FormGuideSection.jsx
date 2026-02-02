@@ -1,14 +1,11 @@
 export default function FormGuideSection() {
   return (
     <section className="block mb-8 md:hidden">
-      <h2 className="mb-[16px] font-reckless text-[40px] leading-[100%] text-pink">
-        Take the Next Step to Feeling Your Best
-      </h2>
       <div>
         <img
-          src={`images/landingpage/guide-cover.webp`}
+          src="/images/landingpage/guide-cover.webp"
           alt="lady smiling"
-          className="w-full h-auto mb-8 rounded-lg"
+          className="w-full h-auto rounded-lg"
         />
       </div>
       <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px]">
@@ -17,7 +14,7 @@ export default function FormGuideSection() {
       </p>
 
       <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[15px]">
-        Inside the guide (quick read): 
+        Inside the guide (quick read):
       </p>
       <ul className="list-disc font-untitled font-normal text-[18px] text-black leading-6 mb-[25px] ml-8">
         <li>What to expect during your 90-minute Welcome Visit</li>

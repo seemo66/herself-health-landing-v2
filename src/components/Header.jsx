@@ -20,21 +20,21 @@ export default function Header() {
           className="flex items-center mb-[12px] lg:mb-0"
         >
           <img
-            src={`images/landingpage/logo-pink.svg`}
+            src="images/landingpage/logo-pink.svg"
             alt="Herself Health logo"
-            className="h-auto w-auto"
+            className="w-auto h-auto"
           />
           <span className="sr-only">Herself Health</span>
         </a>
 
         {/* Phone */}
-        <a href="tel:8882901209" aria-label="Herself Health phone" className="flex items-center">
+        <a href="tel:18774874554" aria-label="Herself Health phone" className="flex items-center">
           <img
-            src={`images/landingpage/telephone.svg`}
+            src="images/landingpage/telephone.svg"
             alt="telephone icon"
-            className="h-auto w-auto mr-4"
+            className="w-auto h-auto mr-4"
           />
-          <span className="text-pink font-untitled font-bold text-[20px]">888-290-1209</span>
+          <span className="text-pink font-untitled font-bold text-[20px]">877-487-4554</span>
         </a>
       </div>
     </header>

@@ -9,12 +9,9 @@ export default function ServicesSection() {
     >
       {/* Responsive service image */}
       <picture className="block aspect-[1.34] w-full md:aspect-auto md:w-[50%]">
-        <source
-          srcSet={`images/landingpage/services-desktop.webp`}
-          media="(min-width: 768px)"
-        />
+        <source srcSet="images/landingpage/services-desktop.webp" media="(min-width: 768px)" />
         <img
-          src={`images/landingpage/services-mobile.webp`}
+          src="images/landingpage/services-mobile.webp"
           alt="A nurse assists an older woman as they both review medical information on a tablet."
           className="h-full w-full rounded-[10px] object-cover lg:max-w-[643px]"
         />
@@ -27,7 +24,7 @@ export default function ServicesSection() {
         </h2>
 
         <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
-          <strong>Comprehensive primary care for women 65+.</strong> We create personalized care
+          <strong>Comprehensive primary care for women 50+.</strong> We create personalized care
           plans to support your health goals—starting with a 90-minute Welcome Visit.
         </p>
 
@@ -44,7 +41,7 @@ export default function ServicesSection() {
           ].map((item, idx) => (
             <li key={idx} className="flex items-center space-x-3">
               <img
-                src={`images/landingpage/checkmark-pink.svg`}
+                src="images/landingpage/checkmark-pink.svg"
                 alt="" // decorative, so we leave empty alt
                 aria-hidden="true"
                 className="w-5 h-5"
@@ -73,7 +70,11 @@ export default function ServicesSection() {
         </ul>
 
         <p className="mt-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
-          Original Medicare (Parts A & B) welcome. We’ll confirm coverage in minutes.
+          <strong>Original Medicare (Parts A & B) welcome.</strong>
+        </p>
+
+        <p className="mt-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
+          We’ll confirm coverage in minutes.
         </p>
       </div>
     </section>

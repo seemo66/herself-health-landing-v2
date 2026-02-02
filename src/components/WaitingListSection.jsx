@@ -13,12 +13,12 @@ export default function WaitingListSection() {
           <picture>
             {/* Desktop image */}
             <source
-              srcSet={`images/landingpage/waitlist-desktop.webp`}
+              srcSet="images/landingpage/waitlist-desktop.webp"
               media="(min-width: 768px)"
             />
             {/* Mobile fallback */}
             <img
-              src={`images/landingpage/waitlist-mobile.webp`}
+              src="images/landingpage/waitlist-mobile.webp"
               alt="A woman wearing glasses stands in front of a closed door, looking directly at the camera"
               className="block w-full md:min-h-[694px] object-cover md:h-[877px]"
             />
@@ -35,7 +35,7 @@ export default function WaitingListSection() {
           {/* Testimonial block */}
           <div className="mb-[35px] lg:mb-[40px] md:text-center md:hidden">
             <img
-              src={`images/landingpage/quotations-icon.png`}
+              src="images/landingpage/quotations-icon.png"
               alt="Quotation mark icon"
               className="block w-[50px] h-full mb-[15px] md:mx-auto"
             />
@@ -52,25 +52,30 @@ export default function WaitingListSection() {
             className="font-reckless font-medium text-[40px] text-pink mb-[35px] 
                           md:text-[50px] leading-[45px]"
           >
-            Schedule Your 90-Minute Welcome Visit Hello
+            Schedule Your 90-Minute Welcome Visit
           </h2>
           {/* Description */}
           <p
             id="call-now"
             className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px] lg:text-[20px]"
           >
-            Original Medicare (Parts A & B) is welcome – we’ll confirm coverage quickly.
+            <strong>
+              Original Medicare (Parts A & B) is welcome – we’ll confirm coverage quickly.
+            </strong>
           </p>
-          {/* <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px] lg:text-[20px]">
-            Prefer to talk to a person? Call&nbsp;
+          <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[10px] lg:text-[20px]">
+            Prefer to talk to a person?
+          </p>
+          <p className="mb-[25px]">
+            Call&nbsp;
             <a href="tel:+18774874554" className="font-bold cursor-pointer">
               (877) 487-4554
             </a>
-          </p> */}
+          </p>
           {/* <a href="tel:+18882901209" className="block w-fit mb-[35px]">
             <button className="h-[67px] w-full rounded-lg bg-purple px-8 py-3 font-untitled text-[18px] md:text-[22px] text-white shadow-lg transition-colors duration-300 hover:bg-purple-dark lg:w-[410px] flex items-center justify-center gap-4">
               <img
-                src={`images/landingpage/telephone-white.svg`}
+                src="images/landingpage/telephone-white.svg"
                 alt="telephone icon"
                 aria-hidden="true"
                 className="h-auto w-[30px]"
@@ -78,23 +83,25 @@ export default function WaitingListSection() {
               Call Now: (888) 290-1209
             </button>
           </a>
+          */}
 
-          <h3 className="font-untitled font-semibold text-[18px] text-black leading-6 mb-[30px] lg:text-[20px] ">
+          <h3 className="font-untitled text-[18px] text-black leading-6 mb-[30px] lg:text-[20px] ">
             Want to connect online instead? Fill out the form below and we’ll be in touch promptly
             to help you get started.
-          </h3> */}
-          <FormGuideSection className="block md:hidden" />
+          </h3>
           {/* Form box */}
-          <div >
+          <div>
             {/* Embedded form */}
             <WaitingListForm />
+            <FormGuideSection className="block md:hidden" />
           </div>
-          <p className="font-untitled font-normal text-[18px] text-black leading-6 mt-[25px] lg:text-[20px]">
+
+          <p className="font-untitled font-normal text-[18px] text-black leading-6 mt-[25px]">
             By submitting, you agree we may contact you
           </p>
-          {/* <p className="font-untitled font-normal text-[18px] text-black leading-6 mt-[25px] lg:text-[20px]">
-            Not affiliated with or endorsed by Medicare or the U.S. government.”
-          </p> */}
+          <p className="font-untitled font-normal text-[18px] text-black leading-6 mt-[25px] ">
+            Not affiliated with or endorsed by Medicare or the U.S. government.
+          </p>
         </div>
       </div>
     </section>

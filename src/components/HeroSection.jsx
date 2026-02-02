@@ -10,12 +10,12 @@ export default function HeroSection() {
         <picture>
           {/* desktop image source with media query */}
           <source
-            srcSet={`images/landingpage/new-hero-desktop.webp`}
+            srcSet="images/landingpage/new-hero-desktop.webp"
             media="(min-width: 768px)"
           />
           {/* mobile image (default) */}
           <img
-            src={`images/landingpage/new-hero-mobile.webp`}
+            src="images/landingpage/new-hero-mobile.webp"
             alt="A woman happily smiling."
             className="block w-full md:min-h-[525px] object-cover"
           />
@@ -47,7 +47,7 @@ export default function HeroSection() {
             ].map((item, idx) => (
               <li key={idx} className="flex items-center space-x-3">
                 <img
-                  src={`images/landingpage/check-icon-black.png`}
+                  src="images/landingpage/check-icon-black.png"
                   alt="" // decorative, so we leave empty alt
                   aria-hidden="true"
                   className="w-7 h-7"
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
           {/* call-to-action button */}
           <button
-            className="w-full md:w-[420px] h-auto bg-purple text-white font-untitled text-[22px] 
+            className="w-full md:w-[420px] h-auto bg-purple text-white font-untitled text-[20px] 
                        py-3 px-4 rounded-lg shadow-lg hover:bg-purple-dark transition-colors duration-300 mb-8"
             onClick={() => {
               // scroll to waiting list section smoothly when button is clicked
