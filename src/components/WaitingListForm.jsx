@@ -215,7 +215,7 @@ export default function WaitingListForm() {
 
       {/* error message */}
       {error && (
-        <div className="absolute top-0 left-0 right-0 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+        <div className="absolute top-0 left-0 right-0 px-4 py-3 mb-4 text-red-700 bg-red-100 border border-red-400 rounded">
           {error}
         </div>
       )}
@@ -262,11 +262,37 @@ export default function WaitingListForm() {
               : 'bg-purple text-white hover:bg-purple/90'
           }`}
         >
-          {isLoading ? 'Submitting...' : 'Submit'}
+          {isLoading ? 'Submitting...' : 'Request Appointment & Get Guide'}
         </button>
-        <p className="md:col-span-2">
+        {/* <p className="md:col-span-2 font-untitled font-normal text-[18px] text-black leading-6 mt-[15px] lg:text-[20px]">
           We’ll send your guide and follow up to help schedule your visit.
-        </p>
+        </p> */}
+
+        <div className="hidden col-span-2 md:block">
+          <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px] col-span-2 pt-8">
+            Not ready to schedule today? No problem — we’ll email the guide so you can review what
+            to expect, and you can schedule when you’re ready.
+          </p>
+          <div className="flex">
+            <div>
+
+            <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[5px]">
+              Inside the guide (quick read):
+            </p>
+            <ul className="list-disc font-untitled font-normal text-[18px] text-black leading-6 mb-[25px] ml-8">
+              <li>What to expect during your 90-minute Welcome Visit</li>
+              <li>How to prepare for your appointment</li>
+              <li>What to bring to your visit</li>
+              <li>Answers to common questions</li>
+            </ul>
+            </div>
+            <img
+              src={`images/landingpage/guide-cover.webp`}
+              alt="lady smiling"
+              className="w-1/2 h-auto mb-8 rounded-lg"
+            />  
+          </div>
+        </div>
       </form>
     </div>
   );

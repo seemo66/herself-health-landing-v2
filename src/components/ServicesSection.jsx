@@ -10,11 +10,11 @@ export default function ServicesSection() {
       {/* Responsive service image */}
       <picture className="block aspect-[1.34] w-full md:aspect-auto md:w-[50%]">
         <source
-          srcSet="/images/care/services-desktop.webp"
+          srcSet={`images/landingpage/services-desktop.webp`}
           media="(min-width: 768px)"
         />
         <img
-          src="/images/care/services-mobile.webp"
+          src={`images/landingpage/services-mobile.webp`}
           alt="A nurse assists an older woman as they both review medical information on a tablet."
           className="h-full w-full rounded-[10px] object-cover lg:max-w-[643px]"
         />
@@ -23,13 +23,12 @@ export default function ServicesSection() {
       {/* Text content */}
       <div className="lg:max-w-[605px]">
         <h2 className="mb-[16px] font-reckless text-[40px] leading-[100%] text-pink lg:text-[60px]">
-          What We Offer
+          Care Built Around You
         </h2>
 
         <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
-          Our providers specialize in comprehensive healthcare for women 65+, creating personalized
-          treatment plans that address your current conditions, prevent future issues, and support
-          your health goals.
+          <strong>Comprehensive primary care for women 65+.</strong> We create personalized care
+          plans to support your health goals—starting with a 90-minute Welcome Visit.
         </p>
 
         {/* Service highlights with checkmarks */}
@@ -37,7 +36,7 @@ export default function ServicesSection() {
           {[
             'Longer visits with your provider',
             'Same-day or next-day appointments',
-            'Specialist referrals and ongoing coordination to ensure seamless care',
+            'Referrals + care coordination with specialists',
             'Preventive screenings',
             'Chronic condition management',
             'Mental health support',
@@ -45,10 +44,10 @@ export default function ServicesSection() {
           ].map((item, idx) => (
             <li key={idx} className="flex items-center space-x-3">
               <img
-                src="/images/care/checkmark-pink.svg"
+                src={`images/landingpage/checkmark-pink.svg`}
                 alt="" // decorative, so we leave empty alt
                 aria-hidden="true"
-                className="h-5 w-5"
+                className="w-5 h-5"
               />
               <span>{item}</span>
             </li>
@@ -57,9 +56,8 @@ export default function ServicesSection() {
 
         <hr className="my-6 border-t border-black" />
 
-        <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
-          From prevention to management, we are here to help you thrive. Some conditions we
-          specialize in include:
+        <p className="mb-[25px] font-untitled font-bold text-[18px] leading-6 text-black lg:text-[20px]">
+          Common concerns we help with:
         </p>
 
         {/* List of key healthcare services */}
@@ -73,6 +71,10 @@ export default function ServicesSection() {
           <li>Thyroid Health</li>
           <li>Weight Management</li>
         </ul>
+
+        <p className="mt-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
+          Original Medicare (Parts A & B) welcome. We’ll confirm coverage in minutes.
+        </p>
       </div>
     </section>
   );

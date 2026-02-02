@@ -4,18 +4,18 @@
 export default function HeroSection() {
   return (
     // main container with background color
-    <div className="bg-tan relative">
+    <div className="relative bg-tan">
       {/* hero image container */}
       <div className="relative w-full">
         <picture>
           {/* desktop image source with media query */}
           <source
-            srcSet="/images/care/new-hero-desktop.webp"
+            srcSet={`images/landingpage/new-hero-desktop.webp`}
             media="(min-width: 768px)"
           />
           {/* mobile image (default) */}
           <img
-            src="/images/care/new-hero-mobile.webp"
+            src={`images/landingpage/new-hero-mobile.webp`}
             alt="A woman happily smiling."
             className="block w-full md:min-h-[525px] object-cover"
           />
@@ -30,40 +30,43 @@ export default function HeroSection() {
         <div className="md:w-[55%] lg:w-[55%] xl:w-[50%] 2xl:w-[40%] md:max-w-7xl md:pr-8">
           {/* main headline */}
           <h1 className="font-reckless text-[40px] text-pink text-4xl leading-tight mb-3 md:text-2xl xl:text-5xl">
-            Finally, &nbsp;
-            <br className="md:hidden" />
-            Healthcare That Understands You.
+            Finally – primary care that listens.
           </h1>
 
           {/* subheadline */}
-          <h2 className="font-untitled text-[24px] text-darkPink text-lg font-medium mb-3 xl:text-[30px] xl:leading-tight">
-            Expert care designed exclusively for women 65+
+          <h2 className="font-untitled text-[24px] text-darkPink text-lg font-medium mb-4 xl:text-[30px] xl:leading-tight">
+            Designed for women 50+. More time, more answers, and a care team that follows through
           </h2>
 
-          {/* main descriptive paragraph */}
-          <p className="font-untitled text-black text-[18px] mb-3 md:text-base">
-            As women age, healthcare needs shift. Post-menopausal changes, chronic conditions, and a
-            lifetime of caregiving create unique challenges that deserve more than a rushed visit.
-            At Herself Health, our providers listen deeply, create personalized care plans, and help
-            you live your best life every day.
-          </p>
-
-          {/* call-to-action paragraph */}
-          <p className="font-untitled text-black text-[18px] font-bold mb-8 md:text-base lg:text-lg">
-            Experience primary care that's designed around your life — not squeezed into someone
-            else's schedule.
-          </p>
+          {/* Service highlights with checkmarks */}
+          <ul className="mb-[25px] space-y-4 pl-0 font-untitled text-[18px] 2xl:text-[20px] font-medium leading-6 text-black">
+            {[
+              "90-minute Welcome Visit focused on prevention and what matters to you.",
+              "We coordinate screenings, specialists, and follow-ups.",
+              "Original Medicare (parts A & B) welcome (we’ll confirm coverage quickly)."
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-center space-x-3">
+                <img
+                  src={`images/landingpage/check-icon-black.png`}
+                  alt="" // decorative, so we leave empty alt
+                  aria-hidden="true"
+                  className="w-7 h-7"
+                />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
 
           {/* call-to-action button */}
           <button
-            className="w-full md:w-[385px] h-auto bg-purple text-white font-untitled text-[22px] 
+            className="w-full md:w-[420px] h-auto bg-purple text-white font-untitled text-[22px] 
                        py-3 px-4 rounded-lg shadow-lg hover:bg-purple-dark transition-colors duration-300 mb-8"
             onClick={() => {
               // scroll to waiting list section smoothly when button is clicked
               document.getElementById('call-now')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Get My Free Guide & Next Steps
+            Request Appointment & Get Guide
           </button>
         </div>
       </div>

@@ -1,25 +1,30 @@
 export default function FormGuideSection() {
   return (
-    <section className="mb-8 block md:hidden">
+    <section className="block mb-8 md:hidden">
       <h2 className="mb-[16px] font-reckless text-[40px] leading-[100%] text-pink">
         Take the Next Step to Feeling Your Best
       </h2>
       <div>
         <img
-          src="/images/care/guide-cover.webp"
+          src={`images/landingpage/guide-cover.webp`}
           alt="lady smiling"
-          className="w-full h-auto rounded-lg mb-8"
+          className="w-full h-auto mb-8 rounded-lg"
         />
       </div>
       <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px]">
-        Get your free Guide To Feeling Your Best and learn what to expect at Herself Health – from
-        your first visit to the care designed around your life.
+        Not ready to schedule today? No problem — we’ll email the guide so you can review what to
+        expect, and you can schedule when you’re ready.
       </p>
 
-      <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px]">
-        After you download, a member of our team will reach out to answer any questions and help you
-        schedule your first visit when you’re ready.
+      <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[15px]">
+        Inside the guide (quick read): 
       </p>
+      <ul className="list-disc font-untitled font-normal text-[18px] text-black leading-6 mb-[25px] ml-8">
+        <li>What to expect during your 90-minute Welcome Visit</li>
+        <li>How to prepare for your appointment</li>
+        <li>What to bring to your visit</li>
+        <li>Answers to common questions</li>
+      </ul>
     </section>
   );
 }

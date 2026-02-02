@@ -6,8 +6,8 @@ export default function MembershipSection() {
     {
       icon: 'brain-icon.png',
       alt: 'Brain icon representing patient wellbeing',
-      value: '9000+',
-      label: 'Happy Patients',
+      value: '10,000+',
+      label: 'Women Served',
     },
     {
       icon: 'female-doctor-icon.png',
@@ -30,14 +30,14 @@ export default function MembershipSection() {
   ];
 
   return (
-    <section className="flex flex-col bg-tan px-[30px] py-[60px] md:py-[72px] lg:flex-row items-center">
+    <section className="flex flex-col bg-tan px-[30px] py-[60px] md:py-[72px] md:pb-[200px] lg:flex-row items-center">
       {/* Stats Grid */}
       <div className="mb-[47px] grid grid-cols-2 gap-16 px-[30px] md:gap-[100px] lg:mx-auto lg:mb-0 lg:w-[50%] lg:max-w-[550px] lg:place-items-center lg:gap-8 lg:gap-x-0 lg:px-0 lg:text-center">
         {stats.map((stat, idx) => (
           <div key={idx} className="flex w-full flex-col items-center gap-[5px] text-center">
             <div className="mx-auto flex h-[89px] w-[89px] items-center justify-center rounded-full bg-dusty-indego lg:h-[116px] lg:w-[116px]">
               <img
-                src={`/images/care/${stat.icon}`}
+                src={`images/landingpage/${stat.icon}`}
                 alt={stat.alt}
                 className="h-auto w-[46px] lg:w-[60px]"
               />
@@ -58,20 +58,18 @@ export default function MembershipSection() {
           className="mb-[16px] font-reckless text-[40px] leading-[45px] text-pink 
                      md:mb-[20px] md:text-[60px] md:leading-[70px]"
         >
-          How We Work
+          What Makes Herself Health Different
         </h2>
 
         <p className="mb-[16px] font-untitled text-[18px] font-normal leading-6 text-black md:mb-[18px] md:text-[20px]">
-          You've spent a lifetime caring for others— now it's time to focus on you. At Herself
-          Health, we're dedicated to helping women 65+ live their healthiest, most confident lives.
-          Thousands of women have trusted us with their care, and with a 4.9-star Google rating, you
-          can feel confident you're in good hands.
+          You’ve spent a lifetime caring for others—now it’s time to focus on you. At Herself
+          Health, we care for women 65+ with <strong>longer visits, real listening</strong>, and a
+          plan built around your goals.
         </p>
 
         <p className="mb-[16px] font-untitled text-[18px] font-normal leading-6 text-black md:mb-[18px] md:text-[20px]">
-          This is healthcare that supports what you re growing toward, not just what you're going
-          through. Our providers take the time to listen, coordinate with your existing specialists,
-          and create personalized care plans, so you’re ready for whatever lies ahead.
+          We’ll coordinate with your specialists, stay on top of screenings, and help you feel
+          confident about what comes next.
         </p>
 
         <p className="font-untitled text-[18px] font-bold leading-6 text-black md:text-[20px]">
