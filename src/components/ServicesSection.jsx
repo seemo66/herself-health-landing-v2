@@ -27,7 +27,7 @@ export default function ServicesSection() {
         </h2>
 
         <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
-          <strong>Comprehensive primary care for women 65+.</strong> We create personalized care
+          <strong>Comprehensive primary care for women 50+.</strong> We create personalized care
           plans to support your health goals—starting with a 90-minute Welcome Visit.
         </p>
 

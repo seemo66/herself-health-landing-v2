@@ -35,7 +35,7 @@ export default function HeroSection() {
 
           {/* subheadline */}
           <h2 className="font-untitled text-[24px] text-darkPink text-lg font-medium mb-4 xl:text-[30px] xl:leading-tight">
-            Designed for women 50+. More time, more answers, and a care team that follows through
+            Designed for women 50+. More time, more answers, and a care team that follows through.
           </h2>
 
           {/* Service highlights with checkmarks */}
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
           {/* call-to-action button */}
           <button
-            className="w-full md:w-[420px] h-auto bg-purple text-white font-untitled text-[22px] 
+            className="w-full md:w-[420px] h-auto bg-purple text-white font-untitled text-[20px] 
                        py-3 px-4 rounded-lg shadow-lg hover:bg-purple-dark transition-colors duration-300 mb-8"
             onClick={() => {
               // scroll to waiting list section smoothly when button is clicked

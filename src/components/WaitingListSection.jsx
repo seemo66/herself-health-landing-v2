@@ -12,10 +12,7 @@ export default function WaitingListSection() {
         <div className="w-full">
           <picture>
             {/* Desktop image */}
-            <source
-              srcSet="images/landingpage/waitlist-desktop.webp"
-              media="(min-width: 768px)"
-            />
+            <source srcSet="images/landingpage/waitlist-desktop.webp" media="(min-width: 768px)" />
             {/* Mobile fallback */}
             <img
               src="images/landingpage/waitlist-mobile.webp"
@@ -83,11 +80,12 @@ export default function WaitingListSection() {
             Want to connect online instead? Fill out the form below and we’ll be in touch promptly
             to help you get started.
           </h3> */}
-          <FormGuideSection className="block md:hidden" />
+
           {/* Form box */}
-          <div >
+          <div>
             {/* Embedded form */}
             <WaitingListForm />
+            <FormGuideSection className="block md:hidden" />
           </div>
           <p className="font-untitled font-normal text-[18px] text-black leading-6 mt-[25px]">
             By submitting, you agree we may contact you

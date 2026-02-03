@@ -1,14 +1,14 @@
 export default function FormGuideSection() {
   return (
-    <section className="block mb-8 md:hidden">
-      <h2 className="mb-[16px] font-reckless text-[40px] leading-[100%] text-pink">
+    <section className="block md:hidden">
+      {/* <h2 className="mb-[16px] font-reckless text-[40px] leading-[100%] text-pink">
         Take the Next Step to Feeling Your Best
-      </h2>
+      </h2> */}
       <div>
         <img
-          src={`images/landingpage/guide-cover.webp`}
+          src="images/landingpage/guide-cover.webp"
           alt="lady smiling"
-          className="w-full h-auto mb-8 rounded-lg"
+          className="w-full h-auto rounded-lg"
         />
       </div>
       <p className="font-untitled font-normal text-[18px] text-black leading-6 mb-[25px]">
