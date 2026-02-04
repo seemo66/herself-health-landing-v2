@@ -35,7 +35,7 @@ export default function HeroSection() {
 
           {/* subheadline */}
           <h2 className="font-untitled text-[24px] text-darkPink text-lg font-medium mb-4 xl:text-[30px] xl:leading-tight">
-            Designed for women 50+. More time, more answers, and a care team that follows through
+            Designed for women 50+. More time, more answers, and a care team that follows through.
           </h2>
 
           {/* Service highlights with checkmarks */}
