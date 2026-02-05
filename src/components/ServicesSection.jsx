@@ -71,10 +71,6 @@ export default function ServicesSection() {
           <li>Thyroid Health</li>
           <li>Weight Management</li>
         </ul>
-
-        <p className="mt-[25px] font-untitled text-[18px] font-normal leading-6 text-black lg:text-[20px]">
-          Original Medicare (Parts A & B) welcome. We’ll confirm coverage in minutes.
-        </p>
       </div>
     </section>
   );
