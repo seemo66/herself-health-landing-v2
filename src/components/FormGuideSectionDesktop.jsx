@@ -4,7 +4,7 @@ export default function FormGuideSection() {
       <p className="font-reckless text-[40px] mb-8 leading-[50px] text-pink lg:text-[45px] text-center">
         Take the Next Step to Feeling Your Best
       </p>
-      <div className="flex gap-16 flex-col lg:flex-row">
+      <div className="flex flex-col gap-16 lg:flex-row">
         <div>
           <img
             src={`images/landingpage/guide-cover.webp`}
@@ -15,7 +15,7 @@ export default function FormGuideSection() {
         <div className="flex flex-col justify-center lg:max-w-full">
           <p className="font-untitled text-black text-[24px] mb-6">
             Get your free Guide to Feeling Your Best — it’s filled with everything you need to know
-            about how Herself Health helps women 65+ stay active, confident, and cared for.
+            about how Herself Health helps women 50+ stay active, confident, and cared for.
           </p>
           <p className="font-untitled text-black text-[24px] mb-8">
             After you download, a member of our team will reach out to answer any questions and help
